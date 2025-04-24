@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varun Dornal | ECE Innovator</title>
+    <style>
+        /* Galaxy Theme Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            background-image: url('file:///C:/Users/Lenovo/OneDrive/Desktop/website/felix-mittermeier-ihbqhutI9x4-unsplash.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            line-height: 1.6;
+        }
+        
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            min-height: 100vh;
+        }
+        
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #4e3d8b;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin: 0.5rem 0;
+            background: linear-gradient(90deg, #9c27b0, #3f51b5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(156, 39, 176, 0.5);
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #bb86fc;
+            margin-bottom: 1rem;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #bb86fc;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            border: 1px solid transparent;
+        }
+        
+        nav a:hover {
+            background-color: rgba(187, 134, 252, 0.2);
+            text-shadow: 0 0 5px #bb86fc;
+            border-color: #bb86fc;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            background-color: rgba(30, 30, 46, 0.7);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid #4e3d8b;
+        }
+        
+        h2 {
+            color: #bb86fc;
+            border-bottom: 1px solid #4e3d8b;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .project-card {
+            background-color: rgba(48, 48, 70, 0.7);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            border: 1px solid #4e3d8b;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-card h3 {
+            color: #bb86fc;
+            margin-top: 0;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category {
+            background-color: rgba(48, 48, 70, 0.7);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #4e3d8b;
+        }
+        
+        .skill-category h3 {
+            color: #bb86fc;
+            margin-top: 0;
+        }
+        
+        .education-item, .certification-item, .achievement-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #4e3d8b;
+        }
+        
+        .education-item:last-child, 
+        .certification-item:last-child, 
+        .achievement-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            color: #bb86fc;
+        }
+        
+        .item-subtitle {
+            font-style: italic;
+            color: #a5a5a5;
+        }
+        
+        .item-date {
+            color: #a5a5a5;
+            font-size: 0.9rem;
+        }
+        
+        /* Gallery Styles */
+        .gallery-section {
+            margin-top: 3rem;
+        }
+        
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .gallery-tab {
+            padding: 0.5rem 1rem;
+            background-color: rgba(48, 48, 70, 0.7);
+            border: 1px solid #4e3d8b;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-tab:hover, .gallery-tab.active {
+            background-color: rgba(187, 134, 252, 0.2);
+            color: #bb86fc;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            display: none;
+        }
+        
+        .gallery-grid.active {
+            display: grid;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 1rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #4e3d8b;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-item i {
+            color: #bb86fc;
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: #bb86fc;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 10px #bb86fc;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav {
+                gap: 1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="overlay">
+        <header>
+            <h1>Varun Dornal</h1>
+            <div class="tagline">ECE Innovator | AI Enthusiast | Problem Solver</div>
+            <nav>
+                <a href="#about"><i class="fas fa-user"></i> About</a>
+                <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+                <a href="#gallery"><i class="fas fa-camera"></i> Gallery</a>
+                <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+                <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="about">
+                <h2><i class="fas fa-rocket"></i> About Me</h2>
+                <p>Electronics & Computer Engineering student at Walchand Institute of Technology with a passion for building innovative solutions at the intersection of hardware and software. Currently started a company Ayuktam Innovations Pvt Ltd and work as Director .</p>
+                <p>I specialize in leveraging cutting-edge technologies like AI, IoT, and embedded systems to solve real-world problems. With a strong academic record (CGPA 9.1) and multiple hackathon wins, I bring both technical expertise and leadership to every project.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:varundornal272005@gmail.com">varundornal272005@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919730597937">+91 9730597937</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/varun-dornal" target="_blank">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="projects">
+                <h2><i class="fas fa-flask"></i> Innovative Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Ionic Plasma Thruster</h3>
+                        <p>Research-based project developing ion thrusters for advanced space propulsion systems. Focused on creating more efficient and scalable electric propulsion for satellites and deep space missions.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Autonomous Pesticide Robot</h3>
+                        <p>AI-powered agricultural robot that uses computer vision and precision spraying to reduce harmful pesticide usage by up to 70%. Incorporates sensor fusion and autonomous navigation.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>STEM Borer Detection</h3>
+                        <p>Smart farming solution using image processing and machine learning algorithms to detect pest infestations early. Helps farmers take preventive measures and reduce crop losses.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="skills">
+                <h2><i class="fas fa-cogs"></i> Technical Constellations</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-microchip"></i> Hardware Skills</h3>
+                        <ul>
+                            <li>Embedded Systems Design</li>
+                            <li>IoT Development</li>
+                            <li>Arduino/Raspberry Pi</li>
+                            <li>Circuit Design</li>
+                            <li>Sensor Integration</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Programming</h3>
+                        <ul>
+                            <li>C/C++</li>
+                            <li>Python (AI/ML)</li>
+                            <li>REST API Development</li>
+                            <li>Microcontroller Programming</li>
+                            <li>MATLAB</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-brain"></i> AI/ML</h3>
+                        <ul>
+                            <li>Computer Vision</li>
+                            <li>Prompt Engineering</li>
+                            <li>Generative AI</li>
+                            <li>TensorFlow/PyTorch</li>
+                            <li>Google Vertex AI</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                        <ul>
+                            <li>Technical Leadership</li>
+                            <li>Project Management</li>
+                            <li>Team Collaboration</li>
+                            <li>Public Speaking</li>
+                            <li>Multilingual Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- New Gallery Section -->
+            <section id="gallery">
+                <h2><i class="fas fa-images"></i> My Journey in Pictures</h2>
+                
+                <div class="gallery-tabs">
+                    <div class="gallery-tab active" onclick="showGallery('competition')">Competitions</div>
+                    <div class="gallery-tab" onclick="showGallery('sports')">Sports</div>
+                    <div class="gallery-tab" onclick="showGallery('snaps')">Moments</div>
+                </div>
+                
+                <div class="gallery-grid active" id="competition-gallery">
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/IMG_20250223_200848309.jpg" alt="Competition Photo 1">
+                      
+                    </div>
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/IMG_20250223_201132796_HDR.jpg" alt="Competition Photo 2">
+                      
+                    </div>
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/IMG-20241213-WA0017.jpg" alt="Competition Photo 3">
+                      
+                    </div>
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/IMG-20241215-WA0043.jpg" alt="Competition Photo 4">
+                      
+                    </div>
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/IMG-20241215-WA0066.jpg" alt="Competition Photo 5">
+                      
+                    </div>
+                </div>
+                
+                <div class="gallery-grid" id="sports-gallery">
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/IMG-20241226-WA0058.jpg" alt="Sports Photo 1">
+                    
+                    </div>
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/IMG-20241226-WA0059.jpg" alt="Sports Photo 2">
+                    
+                    </div>
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/IMG-20241229-WA0019.jpg" alt="Sports Photo 3">
+                      
+                    </div>
+                </div>
+                
+                <div class="gallery-grid" id="snaps-gallery">
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/1741102377603.jpg" alt="Personal Photo 1">
+                      
+                    </div>
+                    <div class="gallery-item">
+                        <img src="file:///C:/Users/Lenovo/OneDrive/Desktop/website/1744302780240.jpg" alt="Personal Photo 2">
+                      
+                    </div>
+                </div>
+            </section>
+            
+            <section id="education">
+                <h2><i class="fas fa-university"></i> Education & Certifications</h2>
+                <div class="education-item">
+                    <div class="item-title">Walchand Institute of Technology, Solapur</div>
+                    <div class="item-subtitle">B.Tech in Electronics & Computer Engineering (2023-2027)</div>
+                    <div class="item-subtitle">Minor in Information Technology</div>
+                    <div class="item-date">CGPA: 9.1 (First Year)</div>
+                </div>
+                
+                <h3 style="color: #bb86fc; margin-top: 2rem;"><i class="fas fa-certificate"></i> Certifications</h3>
+                <div class="certification-item">
+                    <div class="item-title">Prompt Design in Vertex AI</div>
+                    <div class="item-subtitle">Google Cloud</div>
+                </div>
+                <div class="certification-item">
+                    <div class="item-title">AI for Engineers</div>
+                    <div class="item-subtitle">Intel Bootcamp</div>
+                </div>
+                <div class="certification-item">
+                    <div class="item-title">Generative AI Essentials</div>
+                    <div class="item-subtitle">Google Cloud</div>
+                </div>
+                <div class="certification-item">
+                    <div class="item-title">Programming in C</div>
+                    <div class="item-subtitle">Infosys Springboard</div>
+                </div>
+            </section>
+            
+            <section id="achievements">
+                <h2><i class="fas fa-trophy"></i> Stellar Achievements</h2>
+                <div class="achievement-item">
+                    <div class="item-title">Winner - Smart India Hackathon 2024-25</div>
+                    <p>Led team to develop innovative solution for national-level problem statement in hardware/software category.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="item-title">1st Runner-Up - InnovateYou 2025</div>
+                    <p>Organized by Innovation Foundation for developing sustainable tech solution.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="item-title">1st Place - Kalpak 2024</div>
+                    <p>Siddheshwar Women's College competition for technical innovation.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="item-title">1st Place - WITchar 2025 Innoverse</div>
+                    <p>Recognized as top problem solver in college competition.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="item-title">Athletic Achievements</div>
+                    <p>Competed in All India University and South West Zone diving championships, demonstrating discipline and competitive spirit.</p>
+                </div>
+            </section>
+            
+            <section id="contact">
+                <h2><i class="fas fa-satellite-dish"></i> Connect Across the Cosmos</h2>
+                <p>I'm always open to discussing new projects, research opportunities, or innovative ideas. Let's build something amazing together!</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:varundornal272005@gmail.com">Email Me</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919730597937">Call/WhatsApp</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/varun-dornal" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Solapur, Maharashtra, India</span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="mailto:varundornal272005@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/varundornal" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/varun-dornal" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/varundornal" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025 Varun Dornal. All rights reserved.</p>
+            <p>Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> in Solapur</p>
+        </footer>
+    </div>
+
+    <script>
+        function showGallery(category) {
+            // Hide all galleries
+            document.querySelectorAll('.gallery-grid').forEach(gallery => {
+                gallery.classList.remove('active');
+            });
+            
+            // Deactivate all tabs
+            document.querySelectorAll('.gallery-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected gallery
+            document.getElementById(`${category}-gallery`).classList.add('active');
+            
+            // Activate selected tab
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
