@@ -45,6 +45,32 @@
             margin-bottom: 1rem;
         }
         
+        /* Profile Image Styles */
+        .profile-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-image {
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #bb86fc;
+            box-shadow: 0 0 20px rgba(187, 134, 252, 0.5);
+            display: block;
+            position: relative;
+            z-index: 10;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(187, 134, 252, 0.8);
+        }
+        
         nav {
             display: flex;
             justify-content: center;
@@ -299,6 +325,12 @@
                 padding: 1.5rem;
             }
             
+            .profile-image {
+                width: 160px;
+                height: 160px;
+                margin-top: -130px;
+            }
+            
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
@@ -311,6 +343,9 @@
         <header>
             <h1>Varun Dornal</h1>
             <div class="tagline">ECE Innovator | Entrepreneur | Problem Solver</div>
+            <div class="profile-container">
+                <img src="IMG-20240829-WA0016.jpg" alt="Varun Dornal" class="profile-image">
+            </div>
             <nav>
                 <a href="#about"><i class="fas fa-user"></i> About</a>
                 <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
@@ -321,7 +356,7 @@
                 <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
             </nav>
         </header>
-        
+
         <main>
             <section id="about">
                 <h2><i class="fas fa-rocket"></i> About Me</h2>
