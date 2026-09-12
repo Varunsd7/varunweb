@@ -1,653 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varun Dornal</title>
-    <style>
-        /* Galaxy Theme Styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #ffffff;
-            background-image: url('felix-mittermeier-ihbqhutI9x4-unsplash.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            line-height: 1.6;
-        }
-        
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.75);
-            min-height: 100vh;
-        }
-        
-        header {
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 1px solid #4e3d8b;
-            position: relative;
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            margin: 0.5rem 0;
-            background: linear-gradient(90deg, #9c27b0, #3f51b5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 10px rgba(156, 39, 176, 0.5);
-        }
-        
-        .tagline {
-            font-style: italic;
-            color: #bb86fc;
-            margin-bottom: 1rem;
-        }
-        
-        /* Profile Image Styles */
-        .profile-container {
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .profile-image {
-            width: 175px;
-            height: 175px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #bb86fc;
-            box-shadow: 0 0 20px rgba(187, 134, 252, 0.5);
-            display: block;
-            position: relative;
-            z-index: 10;
-            margin: 0 auto;
-            transition: all 0.3s ease;
-        }
-        
-        .profile-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(187, 134, 252, 0.8);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            color: #bb86fc;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            border: 1px solid transparent;
-        }
-        
-        nav a:hover {
-            background-color: rgba(187, 134, 252, 0.2);
-            text-shadow: 0 0 5px #bb86fc;
-            border-color: #bb86fc;
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        section {
-            margin-bottom: 3rem;
-            background-color: rgba(30, 30, 46, 0.7);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            border: 1px solid #4e3d8b;
-        }
-        
-        h2 {
-            color: #bb86fc;
-            border-bottom: 1px solid #4e3d8b;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .project-card {
-            background-color: rgba(48, 48, 70, 0.7);
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-            border: 1px solid #4e3d8b;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .project-card h3 {
-            color: #bb86fc;
-            margin-top: 0;
-        }
-        
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .skill-category {
-            background-color: rgba(48, 48, 70, 0.7);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #4e3d8b;
-        }
-        
-        .skill-category h3 {
-            color: #bb86fc;
-            margin-top: 0;
-        }
-        
-        .education-item, .certification-item, .achievement-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px dashed #4e3d8b;
-        }
-        
-        .education-item:last-child, 
-        .certification-item:last-child, 
-        .achievement-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .item-title {
-            font-weight: bold;
-            color: #bb86fc;
-        }
-        
-        .item-subtitle {
-            font-style: italic;
-            color: #a5a5a5;
-        }
-        
-        .item-date {
-            color: #a5a5a5;
-            font-size: 0.9rem;
-        }
-        
-        /* Gallery Styles */
-        .gallery-section {
-            margin-top: 3rem;
-        }
-        
-        .gallery-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .gallery-tab {
-            padding: 0.5rem 1rem;
-            background-color: rgba(48, 48, 70, 0.7);
-            border: 1px solid #4e3d8b;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .gallery-tab:hover, .gallery-tab.active {
-            background-color: rgba(187, 134, 252, 0.2);
-            color: #bb86fc;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
-            display: none;
-        }
-        
-        .gallery-grid.active {
-            display: grid;
-        }
-        
-        .gallery-item {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            height: 200px;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.02);
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            padding: 1rem;
-            color: white;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(0);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid #4e3d8b;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin: 1.5rem 0;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .contact-item i {
-            color: #bb86fc;
-            font-size: 1.2rem;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-        
-        .social-links a {
-            color: #bb86fc;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            transform: scale(1.2);
-            text-shadow: 0 0 10px #bb86fc;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            nav {
-                gap: 1rem;
-            }
-            
-            section {
-                padding: 1.5rem;
-            }
-            
-            .profile-image {
-                width: 160px;
-                height: 160px;
-                margin-top: -130px;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <div class="overlay">
-        <header>
-            <h1>Varun Dornal</h1>
-            <div class="tagline">Innovator | Co-Founder | Problem Solver</div>
-            <div class="profile-container">
-                <img src="IMG-20240829-WA0016.jpg" alt="Varun Dornal" class="profile-image">
-            </div>
-            <nav>
-                <a href="#about"><i class="fas fa-user"></i> About</a>
-                <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-                <a href="#skills"><i class="fas fa-code"></i> Skills</a>
-                <a href="#gallery"><i class="fas fa-camera"></i> Gallery</a>
-                <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
-                <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
-                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-            </nav>
-        </header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="Varun Dornal, DRDO, research intern, Avyuktam Innovations, electronics engineer, AI, IoT, robotics, embedded systems, hackathon winner">
+    <meta name="description" content="Varun Dornal — Electronics & Computer Engineering student, Co-Founder & Director at Avyuktam Innovations, hardware-AI builder, hackathon winner and problem solver.">
+<title>Varun Dornal | Engineer · Innovator · Builder</title>
 
-        <main>
-            <section id="about">
-                <h2><i class="fas fa-rocket"></i> About Me</h2>
-                <p>Electronics & Computer Engineering student at Walchand Institute of Technology with a passion for building innovative solutions at the intersection of hardware and software. Currently started a company Avyuktam Innovations Pvt Ltd and work as Director .</p>
-                <p>I specialize in leveraging cutting-edge technologies like AI, IoT, and embedded systems to solve real-world problems. With a strong academic record (CGPA 8.9) and multiple hackathon wins, I bring both technical expertise and leadership to every project.</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:varundornal272005@gmail.com">varundornal272005@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/varundornal2705/" target="_blank">LinkedIn Profile</a>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="projects">
-                <h2><i class="fas fa-flask"></i> Innovative Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Ionic Plasma Thruster</h3>
-                        <p>Ionic plasma thrusters, or ion thrusters, represent a sophisticatedform of spacecraft propulsion system that operates on the principleof accelerating ions to generate thrust. This abstract provides an indepth exploration of ion thrusters, covering key aspects such as theiroperational mechanisms, performance characteristics, applicationsacross various space missions, and the ongoing research anddevelopment efforts aimed at enhancing their capabilities.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Autonomous Pesticide Robot</h3>
-                        <p>It helps in overcoming the risks and efficiencies in pesticide sprayingallied with labor shortages. It utilizes an RFID sensor, cameras, andweather monitoring tools while navigating the fields on its own; suchmeasures are efficient for precise chemical application. Gains fromthe use of the Autonomous Pesticide Spraying Robot include minimalwastage of chemicals, healthier crops, and fewer dangers faced byfarmers from pesticides. There will be accuracy regarding weatherconditions that favor diseases in crops; thus, there will be timelyinterventions with the improvement of yields. It is a scalabilitycosteffective solution for sustainable modernization in agriculture.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>STEM Borer Detection</h3>
-                        <p>STEM BORER explores critical challenges in modern agriculture, including pest& disease attacks, climate change, and resource scarcity. It highlights theimpact of stem borers on crop yields and evaluates existing solutions likepesticides and light traps, emphasizing their limitations. The proposed StemBorer Detector offers a real-time, low-cost, and automated approach to pestdetection using wingbeat frequency analysis, environmental monitoring, andinstant alerts. The presentation underscores the need for innovative, techdriven solutions to enhance agricultural sustainability.</p>
-                    </div>
-                     <div class="project-card">
-                        <h3>Smart Exam Hall Center</h3>
-                        <p>The Exam Hall Center is a smart attendance and monitoring system designed to automate and secure the student verification process during examinations. It combines biometric and RFID technologies using the R307 fingerprint sensor, RFID module, ESP32 microcontroller, and a display unit, all powered through a stable 5V supply. When a student scans their RFID card and fingerprint, the system instantly verifies their identity and displays the result on the screen. Additionally, it sends real-time notifications to a Telegram bot, allowing invigilators or administrators to monitor attendance remotely. This integration of IoT and biometric authentication ensures accuracy, transparency, and efficiency in managing exam hall operations, reducing manual effort and chances of impersonation.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Smart Onion Storage System</h3>
-                        <p>The Onion Storage System is a smart agricultural solution designed to minimize post-harvest losses and improve the shelf life of onions. It integrates environmental sensing and automated control using sensors, microcontrollers, and ventilation mechanisms, all powered through an efficient low-cost setup. The system continuously monitors key parameters such as temperature and humidity, and automatically regulates airflow to maintain optimal storage conditions.When unfavorable conditions are detected, the system activates ventilation and can also send real-time alerts to farmers through connected platforms. This helps prevent spoilage caused by excess moisture, heat, and poor air circulation. By combining IoT-based monitoring with practical storage design, the system ensures better preservation, reduces economic losses, and supports farmers in achieving more sustainable and efficient storage management.</p>
-                    </div>
-                     <div class="project-card">
-                        <h3>Leaf Pest Detection System</h3>
-                        <p>The Leaf Pest Detection System is a smart agricultural solution developed to automate the detection and identification of pests affecting plant leaves using camera-based image processing and Artificial Intelligence (AI). The system uses a camera module to capture real-time images of plant leaves, which are then transferred to a Raspberry Pi for image processing and analysis. The captured images are preprocessed and passed to a trained machine learning model, which analyzes the visual characteristics of the leaf to identify the presence and type of pest. The system can provide the detection results through a web-based interface, allowing farmers or users to monitor crop conditions remotely.The integration of computer vision, machine learning, and IoT technologies enables early identification of pest infestations and supports timely agricultural intervention. By detecting pests at an early stage, the system can help reduce crop damage, prevent the spread of infestation, and minimize unnecessary pesticide application. The system also reduces the need for continuous manual inspection of crops, saving time and effort for farmers. Overall, the Leaf Pest Detection System provides an efficient, automated, and technology-driven approach to crop monitoring, helping improve pest management, crop health, and agricultural productivity.
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="skills">
-                <h2><i class="fas fa-cogs"></i> Technical Constellations</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-microchip"></i> Hardware Skills</h3>
-                        <ul>
-                            <li>Embedded Systems Design</li>
-                            <li>IoT Development</li>
-                            <li>STM 32</li>
-                            <li>Circuit Design</li>
-                            <li>Sensor Integration</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Programming</h3>
-                        <ul>
-                            <li>C & C++</li>
-                            <li>Python</li>
-                            <li>MATLAB</li>
-                            <li>Html+CSS</li>
-                            <li>Java</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-brain"></i> AI/ML</h3>
-                        <ul>
-                            <li>Computer Vision</li>
-                            <li>Prompt Engineering</li>
-                            <li>Generative AI</li>
-                            <li>TensorFlow/PyTorch</li>
-                            <li>Google Vertex AI</li>
-                            <li>AI Foundations Associate</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-users"></i> Soft Skills</h3>
-                        <ul>
-                            <li>Leadership</li>
-                            <li>Project Management</li>
-                            <li>Team Collaboration</li>
-                            <li>Public Speaking</li>
-                            <li>Multilingual Communication</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- New Gallery Section -->
-            <section id="gallery">
-                <h2><i class="fas fa-images"></i> My Journey in Pictures</h2>
-                
-                <div class="gallery-tabs">
-                    <div class="gallery-tab active" onclick="showGallery('competition')">Competitions</div>
-                    <div class="gallery-tab" onclick="showGallery('sports')">Sports</div>
-                    <div class="gallery-tab" onclick="showGallery('snaps')">Moments</div>
-                </div>
-                
-                <div class="gallery-grid active" id="competition-gallery">
-                    <div class="gallery-item">
-                        <img src="IMG-20250605-WA0040.jpg" alt="Competition Photo 1">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="IMG_20250223_200848309.jpg" alt="Competition Photo 2">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="IMG-20241213-WA0017.jpg" alt="Competition Photo 3">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="IMG-20241215-WA0043.jpg" alt="Competition Photo 4">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="IMG-20241215-WA0066.jpg" alt="Competition Photo 5">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="IMG-20250604-WA0004.jpg" alt="Competition Photo 6">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="WhatsApp Image 2025-04-19 at 19.51.22_9f1eb38c.jpg" alt="Competition Photo 7">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="pcoe.jpg" alt="Competition Photo 8">
-                      
-                    </div>
-                    
-                </div>
-                
-                <div class="gallery-grid" id="sports-gallery">
-                    <div class="gallery-item">
-                        <img src="IMG-20241226-WA0058.jpg" alt="Sports Photo 1">
-                    
-                    </div>
-                    <div class="gallery-item">
-                        <img src="IMG-20241226-WA0059.jpg" alt="Sports Photo 2">
-                    
-                    </div>
-                    <div class="gallery-item">
-                        <img src="IMG-20241229-WA0019.jpg" alt="Sports Photo 3">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="WhatsApp Image 2025-04-25 at 12.08.49_3856f6ca.jpg" alt="Sports Photo 4">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="WhatsApp Image 2025-04-25 at 12.08.48_25cd05c0.jpg" alt="Sports Photo 5">
-                      
-                    </div>
-                </div>
-                
-                <div class="gallery-grid" id="snaps-gallery">
-                    <div class="gallery-item">
-                        <img src="1741102377603.jpg" alt="Personal Photo 1">
-                      
-                    </div>
-                    <div class="gallery-item">
-                        <img src="1744302780240.jpg" alt="Personal Photo 2">
-                      
-                    </div>
-                </div>
-                
-            </section>
-            
-            <section id="education">
-                <h2><i class="fas fa-university"></i> Education & Certifications</h2>
-                <div class="education-item">
-                    <div class="item-title">Walchand Institute of Technology, Solapur</div>
-                    <div class="item-subtitle">B.Tech in Electronics & Computer Engineering (2023-2027)</div>
-                    <div class="item-subtitle">Minor Degree in Information Technology</div>
-                    <div class="item-date">CGPA: 8.7 (6th Sem)</div>
-                </div>
-                
-                <h3 style="color: #bb86fc; margin-top: 2rem;"><i class="fas fa-certificate"></i> Certifications</h3>
-                <div class="certification-item">
-                    <div class="item-title">Prompt Design in Vertex AI</div>
-                    <div class="item-subtitle">Google Cloud</div>
-                </div>
-                <div class="certification-item">
-                    <div class="item-title">AI for Engineers</div>
-                    <div class="item-subtitle">Intel Bootcamp</div>
-                </div>
-                <div class="certification-item">
-                    <div class="item-title">Generative AI Essentials</div>
-                    <div class="item-subtitle">Google Cloud</div>
-                </div>
-                <div class="certification-item">
-                    <div class="item-title">Programming in C</div>
-                    <div class="item-subtitle">Infosys Springboard</div>
-                </div>
-                <div class="certification-item">
-                    <div class="item-title">Microsensors and Nanosensors </div>
-                    <div class="item-subtitle">NPTEL</div>
-                </div>
-                <div class="certification-item">
-                    <div class="item-title">Database and SQL </div>
-                    <div class="item-subtitle">Infosys Spring Board</div>
-                </div>
-            </section>
-            
-            <section id="achievements">
-                <h2><i class="fas fa-trophy"></i> Stellar Achievements</h2>
-                <div class="achievement-item">
-                    <div class="item-title">Winner - International Agri Hackathon, Pune 2025</div>
-                    <p>Winner of India’s First International Agri Hackathon with ₹25 Lakh cash prize for pioneering an innovative agri-tech solution to a national-level challenge..</p>
-                </div>
-                <div class="achievement-item">
-                    <div class="item-title">Winner - Smart India Hackathon 2024-25</div>
-                    <p>Led team to develop innovative solution for national-level problem statement in hardware/software category.</p>
-                </div>
-                <div class="achievement-item">
-                    <div class="item-title">1st Runner-Up - InnovateYou 2025</div>
-                    <p>Organized by Innovation Foundation for developing sustainable tech solution.</p>
-                </div>
-                <div class="achievement-item">
-                    <div class="item-title">1st Place - Kalpak 2024</div>
-                    <p>Siddheshwar Women's College competition for technical innovation.</p>
-                </div>
-                <div class="achievement-item">
-                    <div class="item-title">1st Place - WITchar 2025 Innoverse</div>
-                    <p>Recognized as top problem solver in college competition.</p>
-                </div>
-                <div class="achievement-item">
-                    <div class="item-title">1st Runner-Up - Divisional Round Technovation 2k25</div>
-                    <p>Organized by IEEE Bombay Section.</p>
-                </div>
-                <div class="achievement-item">
-                    <div class="item-title">1st Runner-Up - Grand Finale Technovation 2k25</div>
-                    <p>Organized by IEEE Bombay Section.</p>
-                </div>
-                <div class="achievement-item">
-                    <div class="item-title">Athletic Achievements</div>
-                    <p>Competed in All INDIA University and South-West Zone Diving Championships, demonstrating discipline and competitive spirit.</p>
-                    <p>Represented College in Basketball for District level University Games</p>
-                </div>
-            </section>
-            
-            <section id="contact">
-                <h2><i class="fas fa-satellite-dish"></i> Connect Across the Cosmos</h2>
-                <p>I'm always open to discussing new projects, research opportunities, or innovative ideas. Let's build something amazing together!</p>
-                
-                <div class="social-links">
-                    <a href="mailto:varundornal272005@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/varunsd7" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/varundornal2705/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/varunsd_17" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/varundornal_18" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </section>
-        </main>
-        
-        <footer>
-            <p>© 2025 Varun Dornal. All rights reserved.</p>
-            <p>Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> in Solapur</p>
-        </footer>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{
+    --bg:#05070d;
+    --bg-soft:#0a0e18;
+    --card:rgba(14,19,32,.68);
+    --card-strong:rgba(18,24,40,.9);
+    --line:rgba(255,255,255,.10);
+    --text:#f5f7ff;
+    --muted:#9da7bd;
+    --accent:#7c5cff;
+    --accent-2:#00d9ff;
+    --accent-3:#b56cff;
+    --glow:rgba(124,92,255,.28);
+    --radius:24px;
+    --max:1180px;
+}
+
+*{box-sizing:border-box;scroll-behavior:smooth}
+html{scroll-padding-top:90px}
+body{
+    margin:0;
+    color:var(--text);
+    background:
+      radial-gradient(circle at 15% 10%, rgba(124,92,255,.13), transparent 28%),
+      radial-gradient(circle at 85% 22%, rgba(0,217,255,.10), transparent 25%),
+      var(--bg);
+    font-family:Inter,system-ui,sans-serif;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+body::before{
+    content:"";
+    position:fixed;inset:0;pointer-events:none;z-index:-2;
+    background-image:url('felix-mittermeier-ihbqhutI9x4-unsplash.jpg');
+    background-size:cover;background-position:center;
+    opacity:.18;
+}
+body::after{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+    background:linear-gradient(180deg,rgba(5,7,13,.4),rgba(5,7,13,.96) 80%);
+}
+a{color:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.mono{font-family:"Space Grotesk",sans-serif}
+.gradient{
+    background:linear-gradient(100deg,var(--accent-2),var(--accent),var(--accent-3));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+/* Ambient background */
+.orb{position:fixed;border-radius:50%;filter:blur(80px);opacity:.18;pointer-events:none;z-index:-1}
+.orb.one{width:260px;height:260px;background:#7c5cff;left:-100px;top:35%}
+.orb.two{width:220px;height:220px;background:#00d9ff;right:-90px;top:65%}
+
+/* Navigation */
+.nav-wrap{
+    position:fixed;top:18px;left:0;right:0;z-index:1000;
+}
+nav{
+    width:min(var(--max),calc(100% - 28px));
+    margin:auto;
+    padding:10px 12px 10px 20px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    background:rgba(8,11,20,.72);
+    border:1px solid var(--line);
+    border-radius:18px;
+    backdrop-filter:blur(18px);
+    box-shadow:0 16px 50px rgba(0,0,0,.28);
+}
+.brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.03em;text-decoration:none}
+.brand span{color:var(--accent-2)}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{
+    padding:9px 12px;border-radius:12px;text-decoration:none;color:var(--muted);
+    font-size:.9rem;font-weight:600;transition:.25s;
+}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.07)}
+.menu{display:none;background:none;border:0;color:#fff;font-size:1.3rem}
+
+/* Hero */
+.hero{min-height:100vh;display:grid;place-items:center;padding:130px 0 70px;position:relative}
+.hero-grid{
+    display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center;
+}
+.eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:7px 12px;border:1px solid rgba(0,217,255,.25);
+    border-radius:999px;background:rgba(0,217,255,.06);
+    color:#b8f6ff;font-size:.82rem;font-weight:700;
+}
+.pulse{width:7px;height:7px;border-radius:50%;background:#00e5a0;box-shadow:0 0 15px #00e5a0}
+.hero h1{
+    font-family:"Space Grotesk";font-size:clamp(3.4rem,8vw,7.4rem);
+    line-height:.94;letter-spacing:-.075em;margin:22px 0;
+}
+.hero h1 .dim{color:#7f899f}
+.hero-lead{max-width:690px;font-size:1.12rem;color:#b8c1d3}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{
+    display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:14px;
+    text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid var(--line);
+    transition:.25s;cursor:pointer;
+}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#5b7cff);border-color:transparent}
+.btn.secondary{background:rgba(255,255,255,.04)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.hero-meta{display:flex;gap:25px;flex-wrap:wrap;margin-top:35px;color:var(--muted);font-size:.88rem}
+.hero-meta i{color:var(--accent-2);margin-right:7px}
+
+.hero-visual{position:relative;display:grid;place-items:center}
+.profile-ring{
+    width:min(380px,78vw);aspect-ratio:1;border-radius:50%;padding:8px;
+    background:conic-gradient(from 180deg,var(--accent-2),var(--accent),var(--accent-3),var(--accent-2));
+    box-shadow:0 0 90px var(--glow);
+    animation:float 6s ease-in-out infinite;
+}
+.profile-inner{width:100%;height:100%;border-radius:50%;padding:8px;background:#070a12}
+.profile-inner img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.badge{
+    position:absolute;padding:12px 15px;border:1px solid var(--line);border-radius:15px;
+    background:rgba(10,14,24,.82);backdrop-filter:blur(15px);box-shadow:0 15px 35px #0005;
+    font-size:.8rem;font-weight:700;
+}
+.badge i{color:var(--accent-2);margin-right:7px}
+.badge.one{left:0;top:13%}.badge.two{right:0;bottom:15%}
+@keyframes float{50%{transform:translateY(-12px)}}
+
+/* Sections */
+section{padding:95px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:35px}
+.kicker{color:var(--accent-2);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.section-head h2{
+    font-family:"Space Grotesk";font-size:clamp(2rem,4vw,3.2rem);
+    letter-spacing:-.05em;line-height:1.05;margin:8px 0 0;
+}
+.section-head p{max-width:520px;color:var(--muted);margin:0}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.panel{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px;backdrop-filter:blur(16px);box-shadow:0 25px 70px rgba(0,0,0,.18);
+}
+.panel p{color:#b5bfd1}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
+.stat{padding:20px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.stat strong{display:block;font:700 2rem "Space Grotesk";letter-spacing:-.05em}
+.stat span{font-size:.78rem;color:var(--muted)}
+
+/* Projects */
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project{
+    position:relative;min-height:330px;display:flex;flex-direction:column;justify-content:flex-end;
+    overflow:hidden;padding:26px;border-radius:var(--radius);
+    background:linear-gradient(145deg,rgba(20,26,43,.92),rgba(10,13,23,.9));
+    border:1px solid var(--line);transition:.35s;
+}
+.project::before{
+    content:"";position:absolute;width:180px;height:180px;border-radius:50%;
+    right:-70px;top:-70px;background:var(--accent);filter:blur(55px);opacity:.16;
+}
+.project:hover{transform:translateY(-7px);border-color:rgba(124,92,255,.45);box-shadow:0 25px 70px rgba(0,0,0,.3)}
+.project-number{font:700 4.5rem "Space Grotesk";color:rgba(255,255,255,.045);position:absolute;right:18px;top:8px}
+.project-icon{
+    width:48px;height:48px;display:grid;place-items:center;border-radius:14px;
+    background:rgba(124,92,255,.12);color:#bbaeff;border:1px solid rgba(124,92,255,.25);margin-bottom:auto;
+}
+.project h3{font:600 1.25rem "Space Grotesk";margin:30px 0 8px}
+.project p{color:var(--muted);font-size:.9rem;margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.tag{padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.055);color:#aeb8cb;font-size:.7rem;border:1px solid var(--line)}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.skill{
+    padding:24px;border-radius:20px;background:rgba(255,255,255,.035);border:1px solid var(--line)
+}
+.skill i{font-size:1.2rem;color:var(--accent-2)}
+.skill h3{font:600 1.05rem "Space Grotesk";margin:13px 0}
+.skill ul{list-style:none;padding:0;margin:0}
+.skill li{color:var(--muted);font-size:.84rem;padding:5px 0}
+.skill li::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin:0 9px 2px 0}
+
+/* Timeline */
+.timeline{position:relative;margin-left:10px}
+.timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:1px;background:var(--line)}
+.t-item{position:relative;padding:0 0 30px 38px}
+.t-dot{position:absolute;left:3px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 15px rgba(0,217,255,.7)}
+.t-item h3{font:600 1.1rem "Space Grotesk";margin:0}
+.t-item .date{color:var(--accent-2);font-size:.75rem;font-weight:700}
+.t-item p{color:var(--muted);margin:6px 0 0;font-size:.9rem}
+
+/* Achievements */
+.achievements{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.achievement{
+    display:flex;gap:16px;align-items:flex-start;padding:22px;border-radius:20px;
+    background:rgba(255,255,255,.035);border:1px solid var(--line);transition:.25s
+}
+.achievement:hover{background:rgba(255,255,255,.055);transform:translateX(4px)}
+.achievement i{font-size:1.15rem;color:#ffd36a;padding-top:4px}
+.achievement h3{font:600 1rem "Space Grotesk";margin:0 0 5px}
+.achievement p{font-size:.82rem;color:var(--muted);margin:0}
+
+/* Gallery */
+.gallery-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.gallery-tab{
+    border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--muted);
+    padding:9px 15px;border-radius:999px;cursor:pointer;font:600 .8rem Inter;transition:.2s
+}
+.gallery-tab.active,.gallery-tab:hover{color:#fff;background:rgba(124,92,255,.15);border-color:rgba(124,92,255,.35)}
+.gallery-grid{display:none;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery-grid.active{display:grid}
+.gallery-item{height:210px;overflow:hidden;border-radius:18px;border:1px solid var(--line);cursor:pointer;position:relative}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gallery-item::after{content:"\f00e";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;inset:auto 12px 12px auto;width:35px;height:35px;display:grid;place-items:center;border-radius:50%;background:#05070dcc;opacity:0;transition:.25s}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item:hover::after{opacity:1}
+
+/* Contact */
+.contact{
+    text-align:center;padding:70px 30px;border-radius:30px;
+    background:
+      radial-gradient(circle at 50% 0,rgba(124,92,255,.18),transparent 48%),
+      rgba(14,19,32,.72);
+    border:1px solid var(--line);
+}
+.contact h2{font:700 clamp(2.2rem,5vw,4.2rem) "Space Grotesk";letter-spacing:-.06em;margin:8px 0 15px}
+.contact p{color:var(--muted);max-width:650px;margin:0 auto 25px}
+.socials{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.socials a{
+    width:44px;height:44px;display:grid;place-items:center;border-radius:13px;
+    border:1px solid var(--line);background:rgba(255,255,255,.04);text-decoration:none;color:#c7cfde;transition:.2s
+}
+.socials a:hover{transform:translateY(-3px);color:#fff;background:rgba(124,92,255,.15)}
+
+footer{padding:35px 0 50px;color:#68738a;font-size:.78rem;text-align:center}
+footer span{color:#a8b2c5}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.86);display:none;place-items:center;z-index:2000;padding:25px}
+.modal.show{display:grid}
+.modal img{max-width:min(1100px,95vw);max-height:88vh;border-radius:18px;border:1px solid var(--line)}
+.close{position:fixed;right:25px;top:20px;width:45px;height:45px;border-radius:50%;border:1px solid var(--line);background:#111827;color:#fff;font-size:1.3rem;cursor:pointer}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* Responsive */
+@media(max-width:950px){
+    .hero-grid,.about-grid{grid-template-columns:1fr}
+    .hero{text-align:center}
+    .hero-lead{margin:auto}
+    .hero-actions,.hero-meta{justify-content:center}
+    .hero-visual{order:-1}
+    .profile-ring{width:280px}
+    .badge.one{left:5%}.badge.two{right:5%}
+    .project-grid{grid-template-columns:1fr 1fr}
+    .skills{grid-template-columns:1fr 1fr}
+    .gallery-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+    .container{width:min(var(--max),calc(100% - 28px))}
+    .nav-links{
+        display:none;position:absolute;left:0;right:0;top:65px;flex-direction:column;
+        padding:10px;background:rgba(8,11,20,.96);border:1px solid var(--line);border-radius:16px
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{width:100%;text-align:center}
+    .menu{display:block}
+    .hero{padding-top:120px}
+    .hero h1{font-size:clamp(3rem,16vw,5rem)}
+    .section-head{display:block}
+    .section-head p{margin-top:14px}
+    .project-grid,.achievements,.skills{grid-template-columns:1fr}
+    .gallery-grid{grid-template-columns:1fr 1fr}
+    .gallery-item{height:155px}
+}
+@media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+</style>
+</head>
+
+<body>
+<div class="orb one"></div><div class="orb two"></div>
+
+<div class="nav-wrap">
+<nav>
+    <a class="brand" href="#top">VARUN<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a><a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <button class="menu" id="menuBtn" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+</nav>
+</div>
+
+<main id="top">
+<section class="hero">
+<div class="container hero-grid">
+    <div class="reveal">
+        <div class="eyebrow"><span class="pulse"></span> Engineer · Innovator · Co-Founder · Builder</div>
+        <h1>Engineer.<br><span class="gradient">Innovator.</span><br><span class="dim">Problem Solver.</span></h1>
+        <p class="hero-lead">
+            Electronics & Computer Engineering student at Walchand Institute of Technology and Co-Founder & Director at <strong>Avyuktam Innovations Pvt. Ltd.</strong>,
+            building at the intersection of <strong>AI, IoT, embedded systems, robotics and intelligent hardware</strong> to turn real-world problems into working solutions.
+        </p>
+        <div class="hero-actions">
+            <a class="btn primary" href="#projects">Explore my work <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn secondary" href="#contact">Let's connect</a>
+        </div>
+        <div class="hero-meta">
+            <span><i class="fa-solid fa-location-dot"></i>Solapur, India</span>
+            <span><i class="fa-solid fa-graduation-cap"></i>B.Tech E&CE · 2023–2027</span>
+            <span><i class="fa-solid fa-trophy"></i>National & International Hackathon Winner</span>
+        </div>
     </div>
 
-    <script>
-        function showGallery(category) {
-            // Hide all galleries
-            document.querySelectorAll('.gallery-grid').forEach(gallery => {
-                gallery.classList.remove('active');
-            });
-            
-            // Deactivate all tabs
-            document.querySelectorAll('.gallery-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // Show selected gallery
-            document.getElementById(`${category}-gallery`).classList.add('active');
-            
-            // Activate selected tab
-            event.currentTarget.classList.add('active');
+    <div class="hero-visual reveal">
+        <div class="profile-ring">
+            <div class="profile-inner">
+                <img src="IMG-20240829-WA0016.jpg" alt="Portrait of Varun Dornal">
+            </div>
+        </div>
+        <div class="badge one"><i class="fa-solid fa-trophy"></i> Multiple hackathon wins</div>
+        <div class="badge two"><i class="fa-solid fa-microchip"></i> Hardware + AI</div>
+    </div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+    <div class="section-head reveal">
+        <div><div class="kicker">01 · Profile</div><h2>Curious mind.<br><span class="gradient">Builder's mindset.</span></h2></div>
+        <p>I enjoy working where electronics, software and intelligent systems meet — especially when the problem is difficult enough to require a new approach.</p>
+    </div>
+    <div class="about-grid">
+        <div class="panel reveal">
+            <p>
+                I am pursuing B.Tech in Electronics & Computer Engineering at Walchand Institute of Technology, Solapur, with a Minor Degree in Information Technology. My work spans agriculture, automation, robotics, embedded systems, AI, computer vision and emerging deep-tech concepts. In 2026, I am also gaining professional R&D exposure through an ongoing research internship at DRDO.
+            </p>
+            <p>
+                I am a <strong>Co-Founder & Director at Avyuktam Innovations Pvt. Ltd.</strong>, where I work with a team to turn problem statements into prototypes, competition-ready solutions and technology with real-world potential.
+            </p>
+            <div class="stats">
+                <div class="stat"><strong>8.7</strong><span>CGPA · 6th Semester</span></div>
+                <div class="stat"><strong>10+</strong><span>Projects & prototypes</span></div>
+                <div class="stat"><strong>₹25L</strong><span>International Agri Hackathon prize</span></div>
+                <div class="stat"><strong>2026</strong><span>National-level Ideathon Winner</span></div>
+            </div>
+        </div>
+        <div class="panel reveal">
+            <div class="kicker">What drives me</div>
+            <h3 class="mono" style="font-size:1.55rem;margin:10px 0 18px">From problem → prototype → impact.</h3>
+            <p>I like understanding a problem from the ground up, designing the electronics and software around it, testing the idea, and iterating until it becomes useful.</p>
+            <div class="tags">
+                <span class="tag">Embedded Systems</span><span class="tag">Computer Vision</span>
+                <span class="tag">IoT</span><span class="tag">AI/ML</span><span class="tag">Automation</span>
+                <span class="tag">Product Thinking</span><span class="tag">Deep-Tech R&D</span><span class="tag">Rapid Prototyping</span>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+    <div class="section-head reveal">
+        <div><div class="kicker">02 · Selected work</div><h2>Ideas I've<br><span class="gradient">built.</span></h2></div>
+        <p>A selection of engineering projects spanning propulsion, agriculture, biometrics, IoT and computer vision.</p>
+    </div>
+
+    <div class="project-grid">
+        <article class="project reveal">
+            <span class="project-number">01</span><div class="project-icon"><i class="fa-solid fa-water"></i></div>
+            <h3>Samudra MET</h3>
+            <p>An underwater mineral exploration and detection pod combining magnetometer, electromagnetic sensing, IMU, pressure, temperature/conductivity and location tracking for subsea data collection.</p>
+            <div class="tags"><span class="tag">Underwater Tech</span><span class="tag">Sensors</span><span class="tag">AI / Data</span><span class="tag">SIH 2026</span></div>
+        </article>
+
+        <article class="project reveal">
+            <span class="project-number">02</span><div class="project-icon"><i class="fa-solid fa-tractor"></i></div>
+            <h3>AGRIV — Autonomous Pesticide Robot</h3>
+            <p>An autonomous agricultural platform designed for safer and more precise pesticide spraying, integrating robotics, sensing, camera vision and environmental monitoring.</p>
+            <div class="tags"><span class="tag">Robotics</span><span class="tag">IoT</span><span class="tag">AgriTech</span><span class="tag">Automation</span></div>
+        </article>
+
+        <article class="project reveal">
+            <span class="project-number">03</span><div class="project-icon"><i class="fa-solid fa-wave-square"></i></div>
+            <h3>STEM Borer Detection</h3>
+            <p>A low-cost automated pest-detection concept using wingbeat-frequency analysis, environmental monitoring and instant alerts to support early intervention.</p>
+            <div class="tags"><span class="tag">Sensors</span><span class="tag">Signal Analysis</span><span class="tag">AgriTech</span></div>
+        </article>
+
+        <article class="project reveal">
+            <span class="project-number">04</span><div class="project-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>Grape Leaf Disease & Pest Detection</h3>
+            <p>A Raspberry Pi-based computer-vision system for analyzing crop leaves with AI/ML to support early identification of disease or pest-related issues.</p>
+            <div class="tags"><span class="tag">Raspberry Pi</span><span class="tag">Computer Vision</span><span class="tag">ML</span><span class="tag">AgriTech</span></div>
+        </article>
+
+        <article class="project reveal">
+            <span class="project-number">05</span><div class="project-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+            <h3>Magnetic GPS Tracker</h3>
+            <p>A compact GPS/GSM tracking concept designed for location monitoring, with hands-on embedded development and real-world deployment considerations.</p>
+            <div class="tags"><span class="tag">GPS</span><span class="tag">GSM</span><span class="tag">Embedded</span><span class="tag">IoT</span></div>
+        </article>
+
+        <article class="project reveal">
+            <span class="project-number">06</span><div class="project-icon"><i class="fa-solid fa-fingerprint"></i></div>
+            <h3>Smart Exam Hall Center</h3>
+            <p>RFID + fingerprint verification using ESP32, with real-time attendance monitoring and Telegram notifications for secure, automated examination management.</p>
+            <div class="tags"><span class="tag">ESP32</span><span class="tag">Biometrics</span><span class="tag">IoT</span></div>
+        </article>
+
+        <article class="project reveal">
+            <span class="project-number">07</span><div class="project-icon"><i class="fa-solid fa-temperature-half"></i></div>
+            <h3>Smart Onion Storage</h3>
+            <p>IoT-based monitoring and automated ventilation designed to reduce post-harvest losses by maintaining better temperature, humidity and airflow conditions.</p>
+            <div class="tags"><span class="tag">IoT</span><span class="tag">Sensors</span><span class="tag">Agriculture</span></div>
+        </article>
+
+        <article class="project reveal">
+            <span class="project-number">08</span><div class="project-icon"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3>Medical Diagnosis Management Platform</h3>
+            <p>A web-based concept for organizing medical diagnosis and management workflows, extending my work beyond hardware into practical software systems.</p>
+            <div class="tags"><span class="tag">Web</span><span class="tag">Software</span><span class="tag">Healthcare Tech</span></div>
+        </article>
+
+        <article class="project reveal">
+            <span class="project-number">09</span><div class="project-icon"><i class="fa-solid fa-atom"></i></div>
+            <h3>Ionic Plasma Thruster</h3>
+            <p>Exploration of ion-based spacecraft propulsion, covering operating principles, performance characteristics, applications and ongoing development.</p>
+            <div class="tags"><span class="tag">Propulsion</span><span class="tag">Physics</span><span class="tag">Space Tech</span></div>
+        </article>
+    </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+    <div class="section-head reveal">
+        <div><div class="kicker">03 · Capabilities</div><h2>My technical<br><span class="gradient">toolkit.</span></h2></div>
+        <p>Technologies I use to move from an idea on paper to a working prototype.</p>
+    </div>
+    <div class="skills">
+        <div class="skill reveal"><i class="fa-solid fa-microchip"></i><h3>Hardware</h3><ul><li>Embedded Systems Design</li><li>IoT Development</li><li>STM32</li><li>Circuit Design</li><li>Sensor Integration</li><li>GPS / GSM</li><li>Raspberry Pi / ESP32 / Arduino</li></ul></div>
+        <div class="skill reveal"><i class="fa-solid fa-code"></i><h3>Programming</h3><ul><li>C & C++</li><li>Python</li><li>MATLAB</li><li>HTML + CSS</li><li>Java</li></ul></div>
+        <div class="skill reveal"><i class="fa-solid fa-brain"></i><h3>AI / ML</h3><ul><li>Computer Vision</li><li>Prompt Engineering</li><li>Generative AI</li><li>TensorFlow / PyTorch</li><li>Google Vertex AI</li><li>AI-assisted Development</li><li>Dataset & Model Exploration</li></ul></div>
+        <div class="skill reveal"><i class="fa-solid fa-users"></i><h3>Leadership</h3><ul><li>Project Management</li><li>Team Collaboration</li><li>Public Speaking</li><li>Problem Solving</li><li>Multilingual Communication</li><li>Hackathon Team Leadership</li><li>Pitching & Presentations</li></ul></div>
+    </div>
+</div>
+</section>
+
+
+<section id="experience">
+<div class="container">
+    <div class="section-head reveal">
+        <div><div class="kicker">04 · Experience</div><h2>Building beyond<br><span class="gradient">the classroom.</span></h2></div>
+        <p>Leadership, entrepreneurship and hands-on engineering experience developed through Avyuktam Innovations and competitive problem solving.</p>
+    </div>
+    <div class="about-grid">
+        <div class="panel reveal" style="border-color:rgba(139,92,246,.35);box-shadow:0 18px 60px rgba(139,92,246,.12)">
+            <div class="kicker">01 · DRDO</div>
+            <h3 class="mono" style="font-size:1.55rem;margin:10px 0 8px">Research Intern</h3>
+            <div class="date" style="margin-bottom:14px">01 JUL 2026 — 31 OCT 2026 · ONGOING</div>
+            <p>Selected for an ongoing internship with the <strong>Defence Research and Development Organisation (DRDO)</strong>, gaining exposure to a professional R&D environment and defence-oriented engineering workflows.</p>
+            <p style="margin-top:10px">This experience is strengthening my practical understanding of research, experimentation, engineering discipline and technology development.</p>
+            <div class="tags">
+                <span class="tag">DRDO</span><span class="tag">Research & Development</span><span class="tag">Defence Tech</span><span class="tag">Engineering</span>
+            </div>
+        </div>
+
+        <div class="panel reveal">
+            <div class="kicker">02 · Avyuktam Innovations Pvt. Ltd.</div>
+            <h3 class="mono" style="font-size:1.55rem;margin:10px 0 8px">Co-Founder & Director</h3>
+            <p>Working with a multidisciplinary team to identify real-world problems, design technology-driven solutions, build prototypes and present them through innovation competitions and industry-facing opportunities.</p>
+            <div class="tags">
+                <span class="tag">Entrepreneurship</span><span class="tag">R&D</span><span class="tag">Product Development</span>
+                <span class="tag">AgriTech</span><span class="tag">AI</span><span class="tag">IoT</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel reveal" style="margin-top:22px">
+        <div class="kicker">Selected milestones</div>
+        <div class="timeline" style="margin-top:24px">
+            <div class="t-item"><span class="t-dot"></span><div class="date">2026</div><h3>National-Level Ideathon Winner</h3><p>Won a national-level ideathon organized by KIT's College of Engineering, Kolhapur in collaboration with DBATU, Punyashlok Ahilyadevi Holkar Solapur University and Udyam, representing Team Avyuktam Innovations.</p></div>
+            <div class="t-item"><span class="t-dot"></span><div class="date">2025</div><h3>International Agri Hackathon Winner</h3><p>Won the International Agri Hackathon in Pune with a ₹25 Lakh cash prize for an innovative agri-tech solution.</p></div>
+            <div class="t-item"><span class="t-dot"></span><div class="date">2025</div><h3>AI Policy & Innovation Exposure</h3><p>Represented Avyuktam Innovations at the Government of Maharashtra's AI Policy Conference and gained exposure to the wider AI innovation ecosystem.</p></div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="journey">
+<div class="container">
+    <div class="section-head reveal">
+        <div><div class="kicker">05 · Journey</div><h2>Learning,<br><span class="gradient">competing & building.</span></h2></div>
+        <p>Education, certifications and milestones that shaped my engineering journey.</p>
+    </div>
+    <div class="about-grid">
+        <div class="panel reveal">
+            <div class="kicker">Education</div>
+            <div class="timeline" style="margin-top:24px">
+                <div class="t-item"><span class="t-dot"></span><div class="date">2023 — 2027</div><h3>Walchand Institute of Technology, Solapur</h3><p>B.Tech in Electronics & Computer Engineering · Minor Degree in Information Technology · CGPA 8.7 (6th Sem)</p></div>
+                <div class="t-item"><span class="t-dot"></span><div class="date">CERTIFICATIONS</div><h3>AI, Cloud & Embedded Learning</h3><p>Prompt Design in Vertex AI · AI for Engineers · Generative AI Essentials · Programming in C · Microsensors and Nanosensors · Database and SQL</p></div>
+            </div>
+        </div>
+        <div class="panel reveal">
+            <div class="kicker">Current direction</div>
+            <div class="timeline" style="margin-top:24px">
+                <div class="t-item"><span class="t-dot"></span><div class="date">NOW</div><h3>DRDO + Deep-Tech R&D</h3><p>Alongside my ongoing DRDO research internship, exploring intelligent hardware, underwater sensing, computer vision, robotics and data-driven systems that can move from prototype to practical deployment.</p></div>
+                <div class="t-item"><span class="t-dot"></span><div class="date">NEXT</div><h3>Build → Validate → Scale</h3><p>Focused on stronger prototypes, better datasets, robust engineering and solutions that create measurable real-world value.</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section id="achievements">
+<div class="container">
+    <div class="section-head reveal">
+        <div><div class="kicker">06 · Recognition</div><h2>Proof of<br><span class="gradient">the journey.</span></h2></div>
+        <p>Competitions and milestones that reflect my approach to building, leading and solving real-world problems.</p>
+    </div>
+    <div class="achievements">
+        <article class="achievement reveal"><i class="fa-solid fa-trophy"></i><div><h3>Winner — National-Level Ideathon · KIT's College of Engineering, Kolhapur · 2026</h3><p>Won with Team Avyuktam Innovations in an ideathon organized in collaboration with DBATU, Punyashlok Ahilyadevi Holkar Solapur University and Udyam.</p></div></article>
+        <article class="achievement reveal"><i class="fa-solid fa-award"></i><div><h3>Winner — International Agri Hackathon · Pune · 2025</h3><p>Won with an innovative agri-tech solution and received a ₹25 Lakh cash prize.</p></div></article>
+        <article class="achievement reveal"><i class="fa-solid fa-flag"></i><div><h3>Winner — Smart India Hackathon · 2024–25</h3><p>Led a team to develop a solution for a national-level problem statement.</p></div></article>
+        <article class="achievement reveal"><i class="fa-solid fa-medal"></i><div><h3>Multiple Innovation Competition Podiums · 2024–25</h3><p>1st Place at Kalpak 2024 and WITchar 2025 Innoverse; 1st Runner-Up at InnovateYou 2025 and Technovation 2k25 rounds.</p></div></article>
+        <article class="achievement reveal"><i class="fa-solid fa-landmark"></i><div><h3>Represented Avyuktam Innovations · Maharashtra AI Policy Conference</h3><p>Presented and represented the innovation ecosystem at a Government of Maharashtra AI policy-focused conference.</p></div></article>
+        <article class="achievement reveal"><i class="fa-solid fa-person-running"></i><div><h3>Competitive Sports</h3><p>Participated in All India University and South-West Zone Diving Championships and represented college in district-level university basketball.</p></div></article>
+    </div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+    <div class="section-head reveal">
+        <div><div class="kicker">07 · Beyond the screen</div><h2>The journey<br><span class="gradient">in pictures.</span></h2></div>
+        <p>Competitions, sports and moments from the journey behind the projects.</p>
+    </div>
+    <div class="gallery-tabs reveal">
+        <button class="gallery-tab active" data-category="competition">Competitions</button>
+        <button class="gallery-tab" data-category="sports">Sports</button>
+        <button class="gallery-tab" data-category="snaps">Moments</button>
+    </div>
+
+    <div class="gallery-grid active" id="competition-gallery">
+        <div class="gallery-item"><img src="IMG-20250605-WA0040.jpg" alt="Competition photo"></div>
+        <div class="gallery-item"><img src="IMG_20250223_200848309.jpg" alt="Competition photo"></div>
+        <div class="gallery-item"><img src="IMG-20241213-WA0017.jpg" alt="Competition photo"></div>
+        <div class="gallery-item"><img src="IMG-20241215-WA0043.jpg" alt="Competition photo"></div>
+        <div class="gallery-item"><img src="IMG-20241215-WA0066.jpg" alt="Competition photo"></div>
+        <div class="gallery-item"><img src="IMG-20250604-WA0004.jpg" alt="Competition photo"></div>
+        <div class="gallery-item"><img src="WhatsApp Image 2025-04-19 at 19.51.22_9f1eb38c.jpg" alt="Competition photo"></div>
+        <div class="gallery-item"><img src="pcoe.jpg" alt="Competition photo"></div>
+    </div>
+
+    <div class="gallery-grid" id="sports-gallery">
+        <div class="gallery-item"><img src="IMG-20241226-WA0058.jpg" alt="Sports photo"></div>
+        <div class="gallery-item"><img src="IMG-20241226-WA0059.jpg" alt="Sports photo"></div>
+        <div class="gallery-item"><img src="IMG-20241229-WA0019.jpg" alt="Sports photo"></div>
+        <div class="gallery-item"><img src="WhatsApp Image 2025-04-25 at 12.08.49_3856f6ca.jpg" alt="Sports photo"></div>
+        <div class="gallery-item"><img src="WhatsApp Image 2025-04-25 at 12.08.48_25cd05c0.jpg" alt="Sports photo"></div>
+    </div>
+
+    <div class="gallery-grid" id="snaps-gallery">
+        <div class="gallery-item"><img src="1741102377603.jpg" alt="Personal moment"></div>
+        <div class="gallery-item"><img src="1744302780240.jpg" alt="Personal moment"></div>
+    </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+    <div class="contact reveal">
+        <div class="kicker">08 · Contact</div>
+        <h2>Let's build something<br><span class="gradient">worth remembering.</span></h2>
+        <p>Open to research, engineering collaborations, startup opportunities, competitions and ambitious ideas — especially where hardware, AI and real-world problem solving come together.</p>
+        <div class="hero-actions" style="justify-content:center">
+            <a class="btn primary" href="mailto:varundornal272005@gmail.com"><i class="fa-solid fa-envelope"></i> Email me</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/varundornal2705/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+        <div class="socials" style="margin-top:22px">
+            <a href="https://github.com/varunsd7" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/varundornal2705/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/varunsd_17" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/varundornal_18" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+</section>
+</main>
+
+<footer>
+    <div class="container">© 2026 <span>Varun Dornal</span> · Engineer · Innovator · Builder · Avyuktam Innovations</div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+    <button class="close" id="closeModal" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
+    <img id="modalImg" src="" alt="Expanded gallery image">
+</div>
+
+<script>
+/* Mobile navigation */
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+/* Gallery tabs */
+document.querySelectorAll('.gallery-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.gallery-grid').forEach(g => g.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.category + '-gallery').classList.add('active');
+    });
+});
+
+/* Image lightbox */
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden','false');
+    });
+});
+function closeModal(){
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden','true');
+    modalImg.src = '';
+}
+document.getElementById('closeModal').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+/* Scroll reveal */
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
         }
-    </script>
+    });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* Active navigation */
+const sections = document.querySelectorAll('main section[id]');
+const links = document.querySelectorAll('.nav-links a');
+const navObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
+        }
+    });
+},{rootMargin:'-35% 0px -55% 0px'});
+sections.forEach(section => navObserver.observe(section));
+</script>
 </body>
 </html>
-
-
