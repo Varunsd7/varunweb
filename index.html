@@ -293,6 +293,73 @@ footer span{color:#a8b2c5}
 @media(prefers-reduced-motion:reduce){
     *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
+
+/* Enhanced portfolio interactions */
+.scroll-progress{
+    position:fixed;top:0;left:0;height:3px;width:0;z-index:3000;
+    background:linear-gradient(90deg,var(--accent-2),var(--accent),var(--accent-3));
+    box-shadow:0 0 14px rgba(0,217,255,.45);
+}
+.project h3 a{
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+.project h3 a::after{
+    content:"\f35d";
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+    font-size:.72rem;
+    opacity:.45;
+    transition:.2s;
+}
+.project h3 a:hover{color:#fff}
+.project h3 a:hover::after{opacity:1;transform:translate(2px,-2px)}
+.project-footer{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;
+}
+.project-link{
+    display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:10px;
+    border:1px solid rgba(0,217,255,.2);background:rgba(0,217,255,.05);
+    color:#b8f6ff;text-decoration:none;font-size:.72rem;font-weight:700;
+    transition:.2s;
+}
+.project-link:hover{transform:translateY(-2px);background:rgba(0,217,255,.1);border-color:rgba(0,217,255,.4)}
+.project-link.placeholder{visibility:hidden;pointer-events:none}
+.status-line{
+    display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.74rem;font-weight:600;
+}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#00e5a0;box-shadow:0 0 12px #00e5a0}
+.now-strip{
+    margin-top:22px;padding:16px 18px;border-radius:16px;border:1px solid rgba(0,217,255,.16);
+    background:linear-gradient(90deg,rgba(0,217,255,.06),rgba(124,92,255,.06));
+    display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;
+}
+.now-strip strong{font-family:"Space Grotesk"}
+.now-strip span{color:var(--muted);font-size:.82rem}
+.resume-mini{
+    margin-left:auto;
+}
+.copy-email{position:relative}
+.copy-toast{
+    position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);
+    padding:10px 14px;border-radius:12px;background:#111827;border:1px solid var(--line);
+    color:#fff;font-size:.8rem;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:2500;
+}
+.copy-toast.show{opacity:1;transform:translate(-50%,0)}
+.back-top{
+    position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:14px;
+    display:grid;place-items:center;border:1px solid var(--line);background:rgba(8,11,20,.78);
+    backdrop-filter:blur(12px);color:#fff;cursor:pointer;opacity:0;transform:translateY(10px);
+    pointer-events:none;transition:.25s;z-index:1200;
+}
+.back-top.show{opacity:1;transform:none;pointer-events:auto}
+@media(max-width:720px){
+    .resume-mini{margin-left:0}
+    .now-strip{align-items:flex-start}
+}
+
 </style>
 </head>
 
@@ -309,6 +376,7 @@ footer span{color:#a8b2c5}
         <a href="#experience">Experience</a>
         <a href="#achievements">Achievements</a><a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
+        <a class="nav-resume" href="Official Varun Resume.pdf" target="_blank" rel="noopener">Resume</a>
     </div>
     <button class="menu" id="menuBtn" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
 </nav>
@@ -327,6 +395,7 @@ footer span{color:#a8b2c5}
         <div class="hero-actions">
             <a class="btn primary" href="#projects">Explore my work <i class="fa-solid fa-arrow-right"></i></a>
             <a class="btn secondary" href="#contact">Let's connect</a>
+            <a class="btn secondary" href="Official Varun Resume.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
         </div>
         <div class="hero-meta">
             <span><i class="fa-solid fa-location-dot"></i>Solapur, India</span>
@@ -362,7 +431,7 @@ footer span{color:#a8b2c5}
                 I am a <strong>Co-Founder & Director at Avyuktam Innovations Pvt. Ltd.</strong>, where I work with a team to turn problem statements into prototypes, competition-ready solutions and technology with real-world potential.
             </p>
             <div class="stats">
-                <div class="stat"><strong>8.7</strong><span>CGPA · 6th Semester</span></div>
+                <div class="stat"><strong>9.0</strong><span>Current CGPA</span></div>
                 <div class="stat"><strong>10+</strong><span>Projects & prototypes</span></div>
                 <div class="stat"><strong>₹25L</strong><span>International Agri Hackathon prize</span></div>
                 <div class="stat"><strong>2026</strong><span>National-level Ideathon Winner</span></div>
@@ -378,6 +447,10 @@ footer span{color:#a8b2c5}
                 <span class="tag">Product Thinking</span><span class="tag">Deep-Tech R&D</span><span class="tag">Rapid Prototyping</span>
             </div>
         </div>
+    </div>
+    <div class="now-strip reveal">
+        <div><strong>Currently building & learning</strong><br><span>DRDO R&D · Deep-Tech Prototyping · AI + Embedded Systems · Underwater Sensing</span></div>
+        <div class="status-line"><span class="status-dot"></span>Open to meaningful engineering opportunities</div>
     </div>
 </div>
 </section>
@@ -427,16 +500,16 @@ footer span{color:#a8b2c5}
 
         <article class="project reveal">
             <span class="project-number">06</span><div class="project-icon"><i class="fa-solid fa-fingerprint"></i></div>
-            <h3><a href="https://github.com/Varunsd7/Exam_Hall" target="_blank" rel="noopener noreferrer">Smart Exam Hall Center</a></h3>
+            <h3><a href="https://github.com/Varunsd7/Exam_Hall" target="_blank" rel="noopener noreferrer" aria-label="Open Smart Exam Hall Center GitHub repository">Smart Exam Hall Center</a></h3>
             <p>RFID + fingerprint verification using ESP32, with real-time attendance monitoring and Telegram notifications for secure, automated examination management.</p>
-            <div class="tags"><span class="tag">ESP32</span><span class="tag">Biometrics</span><span class="tag">IoT</span></div>
+            <div class="tags"><span class="tag">ESP32</span><span class="tag">Biometrics</span><span class="tag">IoT</span></div><div class="project-footer"><span class="status-line">Source available</span><a class="project-link" href="https://github.com/Varunsd7/Exam_Hall" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
         </article>
 
         <article class="project reveal">
             <span class="project-number">07</span><div class="project-icon"><i class="fa-solid fa-temperature-half"></i></div>
-            <h3><a href="https://github.com/Varunsd7/Onion_Storage_Sys" target="_blank" rel="noopener noreferrer">Smart Onion Storage</a></h3>
+            <h3><a href="https://github.com/Varunsd7/Onion_Storage_Sys" target="_blank" rel="noopener noreferrer" aria-label="Open Smart Onion Storage GitHub repository">Smart Onion Storage</a></h3>
             <p>IoT-based monitoring and automated ventilation designed to reduce post-harvest losses by maintaining better temperature, humidity and airflow conditions.</p>
-            <div class="tags"><span class="tag">IoT</span><span class="tag">Sensors</span><span class="tag">Agriculture</span></div>
+            <div class="tags"><span class="tag">IoT</span><span class="tag">Sensors</span><span class="tag">Agriculture</span></div><div class="project-footer"><span class="status-line">Source available</span><a class="project-link" href="https://github.com/Varunsd7/Onion_Storage_Sys" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
         </article>
 
         <article class="project reveal">
@@ -524,8 +597,8 @@ footer span{color:#a8b2c5}
         <div class="panel reveal">
             <div class="kicker">Education</div>
             <div class="timeline" style="margin-top:24px">
-                <div class="t-item"><span class="t-dot"></span><div class="date">2023 — 2027</div><h3>Walchand Institute of Technology, Solapur</h3><p>B.Tech in Electronics & Computer Engineering · Minor Degree in Information Technology · CGPA 8.7 (6th Sem)</p></div>
-                <div class="t-item"><span class="t-dot"></span><div class="date">CERTIFICATIONS</div><h3>AI, Cloud & Embedded Learning</h3><p>Prompt Design in Vertex AI · AI for Engineers · Generative AI Essentials · Programming in C · Microsensors and Nanosensors · Database and SQL</p></div>
+                <div class="t-item"><span class="t-dot"></span><div class="date">2023 — 2027</div><h3>Walchand Institute of Technology, Solapur</h3><p>B.Tech in Electronics & Computer Engineering · Minor Degree in Information Technology · CGPA 9.0</p></div>
+                <div class="t-item"><span class="t-dot"></span><div class="date">CERTIFICATIONS</div><h3>AI, Cloud & Embedded Learning</h3><p>Prompt Design in Vertex AI · MLOps for Generative AI · Introduction to Vertex AI Studio · Microsensors and Nanosensors · Database and SQL · Programming in C++</p></div>
             </div>
         </div>
         <div class="panel reveal">
@@ -603,6 +676,7 @@ footer span{color:#a8b2c5}
         <p>Open to research, engineering collaborations, startup opportunities, competitions and ambitious ideas — especially where hardware, AI and real-world problem solving come together.</p>
         <div class="hero-actions" style="justify-content:center">
             <a class="btn primary" href="mailto:varundornal272005@gmail.com"><i class="fa-solid fa-envelope"></i> Email me</a>
+            <button class="btn secondary copy-email" id="copyEmail" type="button"><i class="fa-solid fa-copy"></i> Copy email</button>
             <a class="btn secondary" href="https://www.linkedin.com/in/varundornal2705/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
         </div>
         <div class="socials" style="margin-top:22px">
@@ -620,12 +694,43 @@ footer span{color:#a8b2c5}
     <div class="container">© 2026 <span>Varun Dornal</span> · Engineer · Innovator · Builder · Avyuktam Innovations</div>
 </footer>
 
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="copy-toast" id="copyToast" role="status" aria-live="polite">Email copied</div>
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
 <div class="modal" id="modal" aria-hidden="true">
     <button class="close" id="closeModal" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
     <img id="modalImg" src="" alt="Expanded gallery image">
 </div>
 
 <script>
+
+/* Scroll progress + back to top */
+const scrollProgress = document.getElementById('scrollProgress');
+const backTop = document.getElementById('backTop');
+function updateScrollUI(){
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    scrollProgress.style.width = progress + '%';
+    backTop.classList.toggle('show', window.scrollY > 600);
+}
+window.addEventListener('scroll', updateScrollUI, {passive:true});
+updateScrollUI();
+backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+/* Copy email */
+const copyEmail = document.getElementById('copyEmail');
+const copyToast = document.getElementById('copyToast');
+copyEmail.addEventListener('click', async () => {
+    try{
+        await navigator.clipboard.writeText('varundornal272005@gmail.com');
+        copyToast.classList.add('show');
+        setTimeout(() => copyToast.classList.remove('show'), 1800);
+    }catch(err){
+        window.location.href = 'mailto:varundornal272005@gmail.com';
+    }
+});
+
 /* Mobile navigation */
 const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
