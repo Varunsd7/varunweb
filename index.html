@@ -1,856 +1,775 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#05070d">
-<title>Varun Dornal | Engineer · Innovator · Builder</title>
-<meta name="description" content="Varun Dornal — Electronics & Computer Engineering student, Co-Founder & Director at Avyuktam Innovations, hardware-AI builder, hackathon winner and problem solver.">
-<meta name="author" content="Varun Dornal">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070910">
+  <meta name="description" content="Varun Dornal — Electronics and Computer Engineering student, Co-Founder at Avyuktam Innovations, and builder working across embedded systems, IoT, robotics and computer vision.">
+  <meta name="author" content="Varun Dornal">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Varun Dornal | Engineer · Innovator · Builder">
+  <meta property="og:description" content="Building practical engineering solutions across embedded systems, IoT, robotics, agriculture and computer vision.">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Varun Dornal | Engineer · Innovator · Builder</title>
 
-<!-- Social previews (replace og:image with a real 1200x630 image URL when you have one) -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Varun Dornal | Engineer · Innovator · Builder">
-<meta property="og:description" content="Electronics & Computer Engineering student and Co-Founder of Avyuktam Innovations, building at the intersection of AI, IoT, embedded systems and robotics.">
-<meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Varun Dornal",
-  "jobTitle": "Co-Founder & Director, Avyuktam Innovations Pvt. Ltd.",
-  "alumniOf": "Walchand Institute of Technology, Solapur",
-  "knowsAbout": ["Embedded Systems", "IoT", "Robotics", "Computer Vision", "AI/ML"],
-  "sameAs": [
-    "https://github.com/varunsd7",
-    "https://www.linkedin.com/in/varundornal2705/",
-    "https://twitter.com/varunsd_17",
-    "https://www.instagram.com/varundornal_18"
-  ]
-}
-</script>
-
-<script>document.documentElement.classList.add('js');</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-:root{
-    --bg:#05070d;
-    --card:rgba(14,19,32,.68);
-    --line:rgba(255,255,255,.10);
-    --text:#f5f7ff;
-    --muted:#9da7bd;
-    --accent:#7c5cff;
-    --accent-2:#00d9ff;
-    --accent-3:#b56cff;
-    --glow:rgba(124,92,255,.28);
-    --radius:24px;
-    --max:1180px;
-}
-
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
-body{
-    margin:0;
-    color:var(--text);
-    background:
-      radial-gradient(circle at 15% 10%, rgba(124,92,255,.13), transparent 28%),
-      radial-gradient(circle at 85% 22%, rgba(0,217,255,.10), transparent 25%),
-      var(--bg);
-    font-family:Inter,system-ui,sans-serif;
-    line-height:1.7;
-    overflow-x:hidden;
-}
-body::before{
-    content:"";
-    position:fixed;inset:0;pointer-events:none;z-index:-2;
-    background-image:url('felix-mittermeier-ihbqhutI9x4-unsplash.jpg');
-    background-size:cover;background-position:center;
-    opacity:.18;
-}
-body::after{
-    content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
-    background:linear-gradient(180deg,rgba(5,7,13,.4),rgba(5,7,13,.96) 80%);
-}
-a{color:inherit}
-img{max-width:100%}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}
-.mono{font-family:"Space Grotesk",sans-serif}
-.gradient{
-    color:var(--accent-2); /* fallback */
-    background:linear-gradient(100deg,var(--accent-2),var(--accent),var(--accent-3));
-    -webkit-background-clip:text;background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:6px}
-
-.skip-link{
-    position:fixed;left:16px;top:-60px;z-index:4000;padding:10px 16px;border-radius:10px;
-    background:#fff;color:#05070d;font-weight:700;text-decoration:none;transition:top .2s;
-}
-.skip-link:focus{top:14px}
-
-/* Ambient background */
-.orb{position:fixed;border-radius:50%;filter:blur(80px);opacity:.18;pointer-events:none;z-index:-1}
-.orb.one{width:260px;height:260px;background:#7c5cff;left:-100px;top:35%}
-.orb.two{width:220px;height:220px;background:#00d9ff;right:-90px;top:65%}
-
-/* Navigation */
-.nav-wrap{position:fixed;top:18px;left:0;right:0;z-index:1000}
-nav{
-    position:relative;
-    width:min(var(--max),calc(100% - 28px));
-    margin:auto;
-    padding:10px 12px 10px 20px;
-    display:flex;align-items:center;justify-content:space-between;gap:20px;
-    background:rgba(8,11,20,.72);
-    border:1px solid var(--line);
-    border-radius:18px;
-    -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
-    box-shadow:0 16px 50px rgba(0,0,0,.28);
-}
-.brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.03em;text-decoration:none}
-.brand span{color:var(--accent-2)}
-.nav-links{display:flex;gap:2px;align-items:center}
-.nav-links a{
-    padding:9px 12px;border-radius:12px;text-decoration:none;color:var(--muted);
-    font-size:.9rem;font-weight:600;transition:.25s;
-}
-.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.07)}
-.nav-links a.nav-resume{border:1px solid rgba(0,217,255,.25);color:#b8f6ff}
-.menu{display:none;background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer;padding:6px 10px}
-
-/* Hero */
-.hero{min-height:100vh;min-height:100svh;display:grid;place-items:center;padding:130px 0 70px;position:relative}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
-.eyebrow{
-    display:inline-flex;align-items:center;gap:9px;
-    padding:7px 12px;border:1px solid rgba(0,217,255,.25);
-    border-radius:999px;background:rgba(0,217,255,.06);
-    color:#b8f6ff;font-size:.82rem;font-weight:700;
-}
-.pulse{width:7px;height:7px;border-radius:50%;background:#00e5a0;box-shadow:0 0 15px #00e5a0}
-.hero h1{
-    font-family:"Space Grotesk";font-size:clamp(3.4rem,8vw,7.4rem);
-    line-height:.94;letter-spacing:-.075em;margin:22px 0;
-}
-.hero h1 .dim{color:#8a94a9}
-.hero-lead{max-width:690px;font-size:1.12rem;color:#b8c1d3}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{
-    display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:14px;
-    text-decoration:none;font:700 .92rem Inter,system-ui,sans-serif;color:var(--text);
-    border:1px solid var(--line);background:transparent;
-    transition:.25s;cursor:pointer;
-}
-.btn.primary{background:linear-gradient(135deg,var(--accent),#5b7cff);border-color:transparent}
-.btn.secondary{background:rgba(255,255,255,.04)}
-.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
-.hero-meta{display:flex;gap:25px;flex-wrap:wrap;margin-top:35px;color:var(--muted);font-size:.88rem}
-.hero-meta i{color:var(--accent-2);margin-right:7px}
-
-.hero-visual{position:relative;display:grid;place-items:center}
-.profile-ring{
-    width:min(380px,78vw);aspect-ratio:1;border-radius:50%;padding:8px;
-    background:conic-gradient(from 180deg,var(--accent-2),var(--accent),var(--accent-3),var(--accent-2));
-    box-shadow:0 0 90px var(--glow);
-    animation:float 6s ease-in-out infinite;
-}
-.profile-inner{width:100%;height:100%;border-radius:50%;padding:8px;background:#070a12}
-.profile-inner img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
-.badge{
-    position:absolute;padding:12px 15px;border:1px solid var(--line);border-radius:15px;
-    background:rgba(10,14,24,.82);-webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px);box-shadow:0 15px 35px #0005;
-    font-size:.8rem;font-weight:700;
-}
-.badge i{color:var(--accent-2);margin-right:7px}
-.badge.one{left:0;top:13%}.badge.two{right:0;bottom:15%}
-@keyframes float{50%{transform:translateY(-12px)}}
-
-/* Sections */
-section{padding:95px 0}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:35px}
-.kicker{color:var(--accent-2);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-.section-head h2{
-    font-family:"Space Grotesk";font-size:clamp(2rem,4vw,3.2rem);
-    letter-spacing:-.05em;line-height:1.05;margin:8px 0 0;
-}
-.section-head p{max-width:520px;color:var(--muted);margin:0}
-.date{color:var(--accent-2);font-size:.75rem;font-weight:700;letter-spacing:.03em}
-
-/* About */
-.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
-.panel{
-    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-    padding:30px;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 25px 70px rgba(0,0,0,.18);
-}
-.panel p{color:#b5bfd1}
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
-.stat{padding:20px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
-.stat strong{display:block;font:700 2rem "Space Grotesk";letter-spacing:-.05em}
-.stat span{font-size:.78rem;color:var(--muted)}
-
-/* Projects */
-.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.project{
-    position:relative;min-height:330px;display:flex;flex-direction:column;justify-content:flex-end;
-    overflow:hidden;padding:26px;border-radius:var(--radius);
-    background:linear-gradient(145deg,rgba(20,26,43,.92),rgba(10,13,23,.9));
-    border:1px solid var(--line);transition:.35s;
-}
-.project::before{
-    content:"";position:absolute;width:180px;height:180px;border-radius:50%;
-    right:-70px;top:-70px;background:var(--accent);filter:blur(55px);opacity:.16;
-}
-.project:hover{transform:translateY(-7px);border-color:rgba(124,92,255,.45);box-shadow:0 25px 70px rgba(0,0,0,.3)}
-.project-number{font:700 4.5rem "Space Grotesk";color:rgba(255,255,255,.045);position:absolute;right:18px;top:8px}
-.project-icon{
-    width:48px;height:48px;display:grid;place-items:center;border-radius:14px;
-    background:rgba(124,92,255,.12);color:#bbaeff;border:1px solid rgba(124,92,255,.25);margin-bottom:auto;
-}
-.project h3{font:600 1.25rem "Space Grotesk";margin:30px 0 8px}
-.project p{color:var(--muted);font-size:.9rem;margin:0}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
-.tag{padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.055);color:#aeb8cb;font-size:.74rem;border:1px solid var(--line)}
-.project-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px}
-.project-link{
-    display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:10px;
-    border:1px solid rgba(0,217,255,.2);background:rgba(0,217,255,.05);
-    color:#b8f6ff;text-decoration:none;font-size:.74rem;font-weight:700;transition:.2s;
-}
-.project-link:hover{transform:translateY(-2px);background:rgba(0,217,255,.1);border-color:rgba(0,217,255,.4)}
-.status-line{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.74rem;font-weight:600}
-
-/* Skills */
-.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.skill{padding:24px;border-radius:20px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
-.skill i{font-size:1.2rem;color:var(--accent-2)}
-.skill h3{font:600 1.05rem "Space Grotesk";margin:13px 0}
-.skill ul{list-style:none;padding:0;margin:0}
-.skill li{color:var(--muted);font-size:.84rem;padding:5px 0}
-.skill li::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin:0 9px 2px 0}
-
-/* Timeline */
-.timeline{position:relative;margin-left:10px}
-.timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:1px;background:var(--line)}
-.t-item{position:relative;padding:0 0 30px 38px}
-.t-item:last-child{padding-bottom:0}
-.t-dot{position:absolute;left:3px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 15px rgba(0,217,255,.7)}
-.t-item h3{font:600 1.1rem "Space Grotesk";margin:0}
-.t-item p{color:var(--muted);margin:6px 0 0;font-size:.9rem}
-
-/* Achievements */
-.achievements{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.achievement{
-    display:flex;gap:16px;align-items:flex-start;padding:22px;border-radius:20px;
-    background:rgba(255,255,255,.035);border:1px solid var(--line);transition:.25s
-}
-.achievement:hover{background:rgba(255,255,255,.055);transform:translateX(4px)}
-.achievement i{font-size:1.15rem;color:#ffd36a;padding-top:4px}
-.achievement h3{font:600 1rem "Space Grotesk";margin:0 0 5px}
-.achievement p{font-size:.84rem;color:var(--muted);margin:0}
-
-/* Gallery */
-.gallery-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.gallery-tab{
-    border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--muted);
-    padding:9px 15px;border-radius:999px;cursor:pointer;font:600 .8rem Inter,system-ui,sans-serif;transition:.2s
-}
-.gallery-tab[aria-selected="true"],.gallery-tab:hover{color:#fff;background:rgba(124,92,255,.15);border-color:rgba(124,92,255,.35)}
-.gallery-grid{display:none;grid-template-columns:repeat(4,1fr);gap:12px}
-.gallery-grid.active{display:grid}
-.gallery-item{
-    display:block;width:100%;padding:0;margin:0;font:inherit;color:inherit;background:rgba(255,255,255,.03);
-    height:210px;overflow:hidden;border-radius:18px;border:1px solid var(--line);cursor:zoom-in;position:relative
-}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.5s;display:block}
-.gallery-item::after{content:"\f00e";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:12px;bottom:12px;width:35px;height:35px;display:grid;place-items:center;border-radius:50%;background:#05070dcc;opacity:0;transition:.25s}
-.gallery-item:hover img,.gallery-item:focus-visible img{transform:scale(1.08)}
-.gallery-item:hover::after,.gallery-item:focus-visible::after{opacity:1}
-
-/* Contact */
-.contact{
-    text-align:center;padding:70px 30px;border-radius:30px;
-    background:radial-gradient(circle at 50% 0,rgba(124,92,255,.18),transparent 48%),rgba(14,19,32,.72);
-    border:1px solid var(--line);
-}
-.contact h2{font:700 clamp(2.2rem,5vw,4.2rem) "Space Grotesk";letter-spacing:-.06em;margin:8px 0 15px;line-height:1.05}
-.contact p{color:var(--muted);max-width:650px;margin:0 auto 25px}
-.socials{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-.socials a{
-    width:44px;height:44px;display:grid;place-items:center;border-radius:13px;
-    border:1px solid var(--line);background:rgba(255,255,255,.04);text-decoration:none;color:#c7cfde;transition:.2s
-}
-.socials a:hover{transform:translateY(-3px);color:#fff;background:rgba(124,92,255,.15)}
-
-footer{padding:35px 0 50px;color:#7c869c;font-size:.78rem;text-align:center}
-footer span{color:#a8b2c5}
-
-/* Modal */
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.86);display:none;place-items:center;z-index:2000;padding:25px}
-.modal.show{display:grid}
-.modal img{max-width:min(1100px,95vw);max-height:88vh;border-radius:18px;border:1px solid var(--line)}
-.close{position:fixed;right:25px;top:20px;width:45px;height:45px;border-radius:50%;border:1px solid var(--line);background:#111827;color:#fff;font-size:1.3rem;cursor:pointer}
-
-/* Reveal (only hidden when JS is running, so content never disappears without it) */
-.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.js .reveal.visible{opacity:1;transform:none}
-
-/* Scroll UI */
-.scroll-progress{
-    position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:left;z-index:3000;
-    background:linear-gradient(90deg,var(--accent-2),var(--accent),var(--accent-3));
-    box-shadow:0 0 14px rgba(0,217,255,.45);
-}
-.now-strip{
-    margin-top:22px;padding:16px 18px;border-radius:16px;border:1px solid rgba(0,217,255,.16);
-    background:linear-gradient(90deg,rgba(0,217,255,.06),rgba(124,92,255,.06));
-    display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;
-}
-.now-strip strong{font-family:"Space Grotesk"}
-.now-strip span{color:var(--muted);font-size:.82rem}
-.status-dot{width:7px;height:7px;border-radius:50%;background:#00e5a0;box-shadow:0 0 12px #00e5a0}
-.copy-toast{
-    position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);
-    padding:10px 14px;border-radius:12px;background:#111827;border:1px solid var(--line);
-    color:#fff;font-size:.8rem;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:2500;
-}
-.copy-toast.show{opacity:1;transform:translate(-50%,0)}
-.back-top{
-    position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:14px;
-    display:grid;place-items:center;border:1px solid var(--line);background:rgba(8,11,20,.78);
-    -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:#fff;cursor:pointer;opacity:0;transform:translateY(10px);
-    pointer-events:none;transition:.25s;z-index:1200;
-}
-.back-top.show{opacity:1;transform:none;pointer-events:auto}
-
-/* Responsive */
-@media(max-width:950px){
-    .hero-grid,.about-grid{grid-template-columns:1fr}
-    .hero{text-align:center}
-    .hero-lead{margin:auto}
-    .hero-actions,.hero-meta{justify-content:center}
-    .hero-visual{order:-1}
-    .profile-ring{width:280px}
-    .badge.one{left:5%}.badge.two{right:5%}
-    .project-grid{grid-template-columns:1fr 1fr}
-    .skills{grid-template-columns:1fr 1fr}
-    .gallery-grid{grid-template-columns:1fr 1fr}
-    .nav-links a{padding:9px 9px;font-size:.84rem}
-}
-@media(max-width:820px){
-    .nav-links{
-        display:none;position:absolute;left:0;right:0;top:calc(100% + 8px);flex-direction:column;
-        padding:10px;background:rgba(8,11,20,.97);border:1px solid var(--line);border-radius:16px
+  <style>
+    :root {
+      --bg: #070910;
+      --surface: rgba(17, 22, 37, .78);
+      --surface-2: rgba(255,255,255,.035);
+      --line: rgba(255,255,255,.10);
+      --text: #f4f6ff;
+      --muted: #a0abc0;
+      --cyan: #61e6f5;
+      --violet: #9275ff;
+      --pink: #c17cff;
+      --green: #4ee0a1;
+      --radius: 22px;
+      --max: 1160px;
     }
-    .nav-links.open{display:flex}
-    .nav-links a{width:100%;text-align:center;font-size:.92rem;padding:12px}
-    .menu{display:block}
-}
-@media(max-width:720px){
-    .container{width:min(var(--max),calc(100% - 28px))}
-    section{padding:70px 0}
-    .hero{padding-top:120px}
-    .hero h1{font-size:clamp(3rem,16vw,5rem)}
-    .section-head{display:block}
-    .section-head p{margin-top:14px}
-    .project-grid,.achievements,.skills{grid-template-columns:1fr}
-    .project{min-height:290px}
-    .gallery-grid{grid-template-columns:1fr 1fr}
-    .gallery-item{height:155px}
-    .orb{display:none}
-    .now-strip{align-items:flex-start}
-}
-@media(prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
-    *,*::before,*::after{animation:none!important;transition:none!important}
-}
-</style>
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 95px; }
+    body {
+      margin: 0; color: var(--text); background:
+        radial-gradient(circle at 12% 8%, rgba(146,117,255,.15), transparent 28rem),
+        radial-gradient(circle at 88% 24%, rgba(97,230,245,.09), transparent 25rem),
+        var(--bg);
+      font-family: "DM Sans", system-ui, sans-serif; line-height: 1.7;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      opacity: .13; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+    a { color: inherit; }
+    img { max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .mono, h1, h2, h3, .brand { font-family: "Space Grotesk", sans-serif; }
+    .gradient {
+      color: var(--cyan);
+      background: linear-gradient(100deg, var(--cyan), var(--violet), var(--pink));
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .skip-link { position: fixed; top: -60px; left: 16px; z-index: 3000; padding: 10px 14px; color: #05070d; background: white; border-radius: 10px; }
+    .skip-link:focus { top: 12px; }
+
+    /* Navigation */
+    .nav-wrap { position: fixed; inset: 16px 0 auto; z-index: 1000; }
+    nav {
+      width: min(var(--max), calc(100% - 28px)); margin: auto; padding: 10px 13px 10px 20px;
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
+      background: rgba(8,11,20,.82); border: 1px solid var(--line); border-radius: 17px;
+      backdrop-filter: blur(18px); box-shadow: 0 15px 45px rgba(0,0,0,.25);
+    }
+    .brand { font-weight: 700; font-size: 1.1rem; letter-spacing: -.05em; text-decoration: none; white-space: nowrap; }
+    .brand span { color: var(--cyan); }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-links a { padding: 8px 10px; border-radius: 10px; color: var(--muted); text-decoration: none; font-size: .83rem; font-weight: 700; transition: .2s; }
+    .nav-links a:hover, .nav-links a.active { color: white; background: rgba(255,255,255,.07); }
+    .nav-links .resume-link { color: #c6f8ff; border: 1px solid rgba(97,230,245,.25); }
+    .menu-btn { display: none; color: white; background: none; border: 0; font-size: 1.25rem; padding: 8px; cursor: pointer; }
+
+    /* Shared sections */
+    section { padding: 92px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 32px; }
+    .kicker { color: var(--cyan); font-size: .76rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+    .section-head h2 { margin: 8px 0 0; font-size: clamp(2.1rem, 4.6vw, 3.35rem); line-height: 1.04; letter-spacing: -.065em; }
+    .section-head > p { max-width: 510px; margin: 0; color: var(--muted); }
+    .panel { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); backdrop-filter: blur(14px); }
+    .panel p { color: #bac4d6; }
+    .muted { color: var(--muted); }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+    .tag { padding: 5px 10px; color: #b7c2d6; background: rgba(255,255,255,.045); border: 1px solid var(--line); border-radius: 999px; font-size: .73rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      padding: 12px 17px; border: 1px solid var(--line); border-radius: 13px;
+      color: var(--text); background: rgba(255,255,255,.04); text-decoration: none;
+      font: 700 .88rem "DM Sans", sans-serif; transition: .22s; cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-3px); border-color: rgba(97,230,245,.4); }
+    .btn.primary { color: #071018; background: linear-gradient(130deg, var(--cyan), #9e8aff); border-color: transparent; }
+    .btn.primary:hover { box-shadow: 0 12px 32px rgba(97,230,245,.16); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* Hero */
+    .hero { min-height: 100svh; display: grid; align-items: center; padding: 140px 0 75px; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 65px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 7px 12px; border: 1px solid rgba(97,230,245,.25); border-radius: 999px; color: #c5f8ff; background: rgba(97,230,245,.06); font-size: .78rem; font-weight: 700; }
+    .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 13px var(--green); }
+    .hero h1 { margin: 23px 0 20px; font-size: clamp(3.5rem, 7.7vw, 7rem); line-height: .94; letter-spacing: -.085em; }
+    .hero h1 .dim { color: #8c96aa; }
+    .hero-lead { max-width: 690px; color: #bac4d6; font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 27px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 19px; margin-top: 30px; color: var(--muted); font-size: .82rem; }
+    .hero-meta i { margin-right: 7px; color: var(--cyan); }
+    .hero-visual { position: relative; display: grid; place-items: center; }
+    .profile-ring { width: min(360px, 75vw); aspect-ratio: 1; padding: 7px; border-radius: 50%; background: conic-gradient(var(--cyan), var(--violet), var(--pink), var(--cyan)); box-shadow: 0 0 75px rgba(146,117,255,.2); animation: float 6s ease-in-out infinite; }
+    .profile-inner { width: 100%; height: 100%; padding: 7px; border-radius: 50%; background: #080b14; }
+    .profile-inner img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+    .float-card { position: absolute; padding: 11px 14px; border: 1px solid var(--line); border-radius: 13px; background: rgba(10,14,24,.9); backdrop-filter: blur(14px); box-shadow: 0 14px 32px #0005; font-size: .78rem; font-weight: 700; }
+    .float-card i { margin-right: 7px; color: var(--cyan); }
+    .float-card.one { left: -8px; top: 15%; }
+    .float-card.two { right: -8px; bottom: 14%; }
+    @keyframes float { 50% { transform: translateY(-10px); } }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+    .stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 11px; margin-top: 22px; }
+    .stat { padding: 17px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface-2); }
+    .stat strong { display: block; font: 700 1.8rem "Space Grotesk"; letter-spacing: -.06em; }
+    .stat span { color: var(--muted); font-size: .75rem; }
+    .now-strip { display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap; margin-top: 18px; padding: 17px 19px; border: 1px solid rgba(97,230,245,.17); border-radius: 16px; background: linear-gradient(90deg,rgba(97,230,245,.06),rgba(146,117,255,.07)); }
+    .now-strip span { color: var(--muted); font-size: .8rem; }
+    .availability { display: inline-flex; align-items: center; gap: 8px; color: #baf6dd; font-size: .8rem; font-weight: 700; }
+
+    /* Projects */
+    .project-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .project { position: relative; display: flex; flex-direction: column; min-height: 350px; padding: 23px; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: linear-gradient(145deg,rgba(23,29,48,.92),rgba(11,14,25,.94)); transition: .28s; }
+    .project::after { content: ""; position: absolute; width: 160px; height: 160px; right: -75px; top: -75px; border-radius: 50%; background: var(--violet); filter: blur(55px); opacity: .17; pointer-events: none; }
+    .project:hover { transform: translateY(-6px); border-color: rgba(97,230,245,.3); box-shadow: 0 20px 55px rgba(0,0,0,.25); }
+    .project-top { display: flex; align-items: center; justify-content: space-between; }
+    .project-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 13px; color: #c4b7ff; background: rgba(146,117,255,.13); border: 1px solid rgba(146,117,255,.23); }
+    .project-index { color: rgba(255,255,255,.18); font: 700 2.2rem "Space Grotesk"; }
+    .project h3 { margin: 24px 0 8px; font-size: 1.18rem; line-height: 1.25; }
+    .project p { margin: 0; color: var(--muted); font-size: .86rem; }
+    .project .tag-list { margin-top: 15px; }
+    .project-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 18px; }
+    .project-link { display: inline-flex; align-items: center; gap: 7px; color: #bdf6ff; text-decoration: none; font-size: .77rem; font-weight: 700; }
+    .project-link:hover { color: white; }
+    .project-note { color: #8490a7; font-size: .72rem; }
+
+    /* Skills */
+    .skills-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 13px; }
+    .skill { padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface-2); }
+    .skill > i { color: var(--cyan); font-size: 1.2rem; }
+    .skill h3 { margin: 12px 0 10px; font-size: 1.02rem; }
+    .skill ul { margin: 0; padding: 0; list-style: none; }
+    .skill li { padding: 4px 0; color: var(--muted); font-size: .81rem; }
+    .skill li::before { content: "•"; margin-right: 8px; color: var(--violet); }
+
+    /* Experience / timeline */
+    .experience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .date { color: var(--cyan); font-size: .74rem; font-weight: 800; letter-spacing: .06em; }
+    .experience-card h3 { margin: 9px 0 8px; font-size: 1.35rem; }
+    .timeline { position: relative; margin: 22px 0 0 7px; }
+    .timeline::before { content: ""; position: absolute; left: 5px; top: 7px; bottom: 8px; width: 1px; background: var(--line); }
+    .timeline-item { position: relative; padding: 0 0 25px 28px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-dot { position: absolute; left: 0; top: 7px; width: 11px; height: 11px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 13px rgba(97,230,245,.6); }
+    .timeline-item h3 { margin: 5px 0 4px; font-size: 1rem; }
+    .timeline-item p { margin: 0; color: var(--muted); font-size: .84rem; }
+
+    /* Achievements */
+    .achievement-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .achievement { display: flex; gap: 14px; padding: 19px; border: 1px solid var(--line); border-radius: 17px; background: var(--surface-2); transition: .2s; }
+    .achievement:hover { background: rgba(255,255,255,.06); transform: translateY(-2px); }
+    .achievement > i { padding-top: 4px; color: #ffd477; }
+    .achievement h3 { margin: 0 0 5px; font-size: .96rem; }
+    .achievement p { margin: 0; color: var(--muted); font-size: .81rem; }
+
+    /* Gallery */
+    .gallery-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .gallery-tab { padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: var(--surface-2); font: 700 .78rem "DM Sans"; cursor: pointer; }
+    .gallery-tab[aria-selected="true"], .gallery-tab:hover { color: white; border-color: rgba(146,117,255,.4); background: rgba(146,117,255,.14); }
+    .gallery-grid { display: none; grid-template-columns: repeat(4,1fr); gap: 11px; }
+    .gallery-grid.active { display: grid; }
+    .gallery-item { height: 205px; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 15px; background: #111; cursor: zoom-in; }
+    .gallery-item img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    /* Contact and footer */
+    .contact { padding: 62px 28px; text-align: center; border: 1px solid var(--line); border-radius: 27px; background: radial-gradient(circle at 50% 0,rgba(146,117,255,.18),transparent 55%),var(--surface); }
+    .contact h2 { margin: 10px 0 14px; font-size: clamp(2.1rem,5vw,4rem); line-height: 1.05; letter-spacing: -.07em; }
+    .contact p { max-width: 650px; margin: 0 auto 24px; color: var(--muted); }
+    .contact-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+    .socials { display: flex; justify-content: center; gap: 9px; margin-top: 22px; }
+    .socials a { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 12px; color: #c5cede; background: var(--surface-2); text-decoration: none; transition: .2s; }
+    .socials a:hover { color: white; transform: translateY(-3px); border-color: rgba(97,230,245,.4); }
+    footer { padding: 30px 0 45px; color: #77839a; text-align: center; font-size: .77rem; }
+    footer strong { color: #b7c2d6; }
+
+    /* Lightbox and utility UI */
+    .progress { position: fixed; z-index: 2000; inset: 0 auto auto 0; height: 3px; width: 100%; transform: scaleX(0); transform-origin: left; background: linear-gradient(90deg,var(--cyan),var(--violet),var(--pink)); }
+    .back-top { position: fixed; right: 20px; bottom: 20px; z-index: 900; width: 43px; height: 43px; border: 1px solid var(--line); border-radius: 13px; color: white; background: rgba(8,11,20,.85); opacity: 0; pointer-events: none; transform: translateY(8px); transition: .2s; cursor: pointer; }
+    .back-top.show { opacity: 1; pointer-events: auto; transform: none; }
+    .toast { position: fixed; left: 50%; bottom: 25px; z-index: 2500; padding: 10px 14px; border: 1px solid var(--line); border-radius: 11px; color: white; background: #141a2a; font-size: .8rem; opacity: 0; transform: translate(-50%,12px); pointer-events: none; transition: .2s; }
+    .toast.show { opacity: 1; transform: translate(-50%,0); }
+    .modal { position: fixed; inset: 0; z-index: 2200; display: none; place-items: center; padding: 25px; background: rgba(0,0,0,.9); }
+    .modal.show { display: grid; }
+    .modal img { max-width: min(1100px,95vw); max-height: 86vh; border-radius: 15px; }
+    .modal-close { position: fixed; top: 18px; right: 20px; width: 43px; height: 43px; border: 1px solid var(--line); border-radius: 50%; color: white; background: #141a2a; cursor: pointer; }
+
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 35px; text-align: center; }
+      .hero-copy { order: 2; }
+      .hero-visual { order: 1; }
+      .hero-lead { margin-inline: auto; }
+      .hero-actions, .hero-meta { justify-content: center; }
+      .profile-ring { width: 270px; }
+      .project-grid { grid-template-columns: repeat(2,1fr); }
+      .skills-grid { grid-template-columns: repeat(2,1fr); }
+      .gallery-grid { grid-template-columns: repeat(3,1fr); }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 800px) {
+      .menu-btn { display: block; }
+      .nav-links { display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0; flex-direction: column; padding: 10px; border: 1px solid var(--line); border-radius: 15px; background: rgba(8,11,20,.98); }
+      .nav-links.open { display: flex; }
+      .nav-links a { width: 100%; text-align: center; padding: 11px; }
+    }
+    @media (max-width: 650px) {
+      .container { width: min(var(--max),calc(100% - 28px)); }
+      section { padding: 70px 0; }
+      .hero { padding-top: 120px; }
+      .hero h1 { font-size: clamp(3.1rem,15vw,5rem); }
+      .about-grid, .experience-grid, .achievement-grid, .project-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item { height: 155px; }
+      .panel { padding: 22px; }
+      .project { min-height: 315px; }
+      .float-card.one { left: -3px; }
+      .float-card.two { right: -3px; }
+    }
+    @media (max-width: 390px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .hero-meta { flex-direction: column; gap: 7px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Varun Dornal",
+    "jobTitle": "Co-Founder and Director, Avyuktam Innovations Pvt. Ltd.",
+    "alumniOf": "Walchand Institute of Technology, Solapur",
+    "knowsAbout": ["Embedded Systems", "Internet of Things", "Robotics", "Computer Vision", "Electronics", "AI and Machine Learning"],
+    "sameAs": [
+      "https://github.com/varunsd7",
+      "https://www.linkedin.com/in/varundornal2705/",
+      "https://twitter.com/varunsd_17",
+      "https://www.instagram.com/varundornal_18"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-<a class="skip-link" href="#about">Skip to content</a>
-<div class="orb one" aria-hidden="true"></div><div class="orb two" aria-hidden="true"></div>
+  <a class="skip-link" href="#about">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-<header class="nav-wrap">
-<nav aria-label="Primary">
-    <a class="brand" href="#top">VARUN<span>.</span></a>
-    <div class="nav-links" id="navLinks">
+  <header class="nav-wrap">
+    <nav aria-label="Primary navigation">
+      <a class="brand" href="#top">VARUN<span>.</span></a>
+      <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#journey">Journey</a>
         <a href="#achievements">Achievements</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
-        <a class="nav-resume" href="Official%20Varun%20Resume.pdf" target="_blank" rel="noopener">Resume</a>
-    </div>
-    <button class="menu" id="menuBtn" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks"><i class="fa-solid fa-bars"></i></button>
-</nav>
-</header>
+        <a class="resume-link" href="Official%20Varun%20Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
+  </header>
 
-<main id="top">
-<section class="hero">
-<div class="container hero-grid">
-    <div class="reveal">
-        <div class="eyebrow"><span class="pulse"></span> Engineer · Innovator · Co-Founder · Builder</div>
-        <h1>Engineer.<br><span class="gradient">Innovator.</span><br><span class="dim">Problem Solver.</span></h1>
-        <p class="hero-lead">
-            Electronics & Computer Engineering student at Walchand Institute of Technology and Co-Founder & Director at <strong>Avyuktam Innovations Pvt. Ltd.</strong>,
-            building at the intersection of <strong>AI, IoT, embedded systems, robotics and intelligent hardware</strong> to turn real-world problems into working solutions.
-        </p>
-        <div class="hero-actions">
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="pulse"></span> Engineer · Innovator · Co-Founder · Builder</div>
+          <h1>Engineering.<br><span class="gradient">Innovation.</span><br><span class="dim">Real impact.</span></h1>
+          <p class="hero-lead">
+            I’m Varun Dornal, an Electronics & Computer Engineering student at Walchand Institute of Technology and Co-Founder & Director at <strong>Avyuktam Innovations Pvt. Ltd.</strong> I build practical solutions at the intersection of embedded systems, IoT, robotics, electronics and computer vision.
+          </p>
+          <div class="hero-actions">
             <a class="btn primary" href="#projects">Explore my work <i class="fa-solid fa-arrow-right"></i></a>
-            <a class="btn secondary" href="#contact">Let's connect</a>
-            <a class="btn secondary" href="Official%20Varun%20Resume.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
-        </div>
-        <div class="hero-meta">
+            <a class="btn" href="#contact">Let's connect</a>
+            <a class="btn" href="Official%20Varun%20Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+          </div>
+          <div class="hero-meta">
             <span><i class="fa-solid fa-location-dot"></i>Solapur, India</span>
             <span><i class="fa-solid fa-graduation-cap"></i>B.Tech E&CE · 2023–2027</span>
-            <span><i class="fa-solid fa-trophy"></i>National & International Hackathon Winner</span>
+            <span><i class="fa-solid fa-microchip"></i>Hardware-first engineering</span>
+          </div>
         </div>
-    </div>
 
-    <div class="hero-visual reveal">
-        <div class="profile-ring">
+        <div class="hero-visual reveal">
+          <div class="profile-ring">
             <div class="profile-inner">
-                <img src="IMG-20240829-WA0016.jpg" alt="Portrait of Varun Dornal" fetchpriority="high" decoding="async">
+              <!-- Replace with your actual portrait filename -->
+              <img src="IMG-20240829-WA0016.jpg" alt="Portrait of Varun Dornal" fetchpriority="high">
             </div>
+          </div>
+          <div class="float-card one"><i class="fa-solid fa-trophy"></i>Innovation competition winner</div>
+          <div class="float-card two"><i class="fa-solid fa-microchip"></i>Hardware + AI</div>
         </div>
-        <div class="badge one"><i class="fa-solid fa-trophy"></i> Multiple hackathon wins</div>
-        <div class="badge two"><i class="fa-solid fa-microchip"></i> Hardware + AI</div>
-    </div>
-</div>
-</section>
+      </div>
+    </section>
 
-<section id="about">
-<div class="container">
-    <div class="section-head reveal">
-        <div><div class="kicker">01 · Profile</div><h2>Curious mind.<br><span class="gradient">Builder's mindset.</span></h2></div>
-        <p>I enjoy working where electronics, software and intelligent systems meet — especially when the problem is difficult enough to require a new approach.</p>
-    </div>
-    <div class="about-grid">
-        <div class="panel reveal">
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">01 · Profile</div><h2>Curious mind.<br><span class="gradient">Builder's mindset.</span></h2></div>
+          <p>I enjoy understanding real-world problems from the ground up, designing systems around them and turning ideas into tested prototypes.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="panel reveal">
             <p>
-                I am pursuing B.Tech in Electronics & Computer Engineering at Walchand Institute of Technology, Solapur, with a Minor Degree in Information Technology. My work spans agriculture, automation, robotics, embedded systems, AI, computer vision and emerging deep-tech concepts. In 2026, I gained professional R&D exposure through a research internship at DRDO.
+              I am pursuing a B.Tech in Electronics & Computer Engineering at Walchand Institute of Technology, Solapur, with a Minor Degree in Information Technology. My interests include embedded hardware, IoT, robotics, intelligent sensing, agriculture technology and computer vision.
             </p>
             <p>
-                I am a <strong>Co-Founder & Director at Avyuktam Innovations Pvt. Ltd.</strong>, where I work with a team to turn problem statements into prototypes, competition-ready solutions and technology with real-world potential.
+              As <strong>Co-Founder & Director at Avyuktam Innovations Pvt. Ltd.</strong>, I work with a multidisciplinary team to develop prototypes, participate in innovation competitions and explore technology-driven solutions to practical challenges.
             </p>
             <div class="stats">
-                <div class="stat"><strong>9.0</strong><span>Current CGPA</span></div>
-                <div class="stat"><strong>10+</strong><span>Projects & prototypes</span></div>
-                <div class="stat"><strong>₹25L</strong><span>International Agri Hackathon prize</span></div>
-                <div class="stat"><strong>2026</strong><span>National-level Ideathon Winner</span></div>
+              <div class="stat"><strong>9.0</strong><span>CGPA</span></div>
+              <div class="stat"><strong>10+</strong><span>Projects and prototypes</span></div>
+              <div class="stat"><strong>₹25L</strong><span>International Agri Hackathon prize</span></div>
+              <div class="stat"><strong>2026</strong><span>National-level Ideathon winner</span></div>
             </div>
-        </div>
-        <div class="panel reveal">
+          </article>
+
+          <article class="panel reveal">
             <div class="kicker">What drives me</div>
-            <h3 class="mono" style="font-size:1.55rem;margin:10px 0 18px">From problem → prototype → impact.</h3>
-            <p>I like understanding a problem from the ground up, designing the electronics and software around it, testing the idea, and iterating until it becomes useful.</p>
-            <div class="tags">
-                <span class="tag">Embedded Systems</span><span class="tag">Computer Vision</span>
-                <span class="tag">IoT</span><span class="tag">AI/ML</span><span class="tag">Automation</span>
-                <span class="tag">Product Thinking</span><span class="tag">Deep-Tech R&D</span><span class="tag">Rapid Prototyping</span>
+            <h3 class="mono" style="font-size:1.5rem;line-height:1.2;margin:12px 0 15px">From problem → prototype → impact.</h3>
+            <p>I like combining electronics, firmware, sensors, mechanical systems and software. My preferred work is hands-on engineering: building, testing, finding what fails and improving the design.</p>
+            <div class="tag-list">
+              <span class="tag">Embedded Systems</span><span class="tag">Electronics</span>
+              <span class="tag">IoT</span><span class="tag">Robotics</span>
+              <span class="tag">Computer Vision</span><span class="tag">AI / ML</span>
+              <span class="tag">Rapid Prototyping</span><span class="tag">Product Development</span>
             </div>
+          </article>
         </div>
-    </div>
-    <div class="now-strip reveal">
-        <div><strong>Currently building & learning</strong><br><span>Deep-Tech Prototyping · AI + Embedded Systems · Underwater Sensing · Computer Vision</span></div>
-        <div class="status-line"><span class="status-dot"></span>Open to meaningful engineering opportunities</div>
-    </div>
-</div>
-</section>
 
-<section id="projects">
-<div class="container">
-    <div class="section-head reveal">
-        <div><div class="kicker">02 · Selected work</div><h2>Ideas I've<br><span class="gradient">built.</span></h2></div>
-        <p>A selection of engineering projects spanning propulsion, agriculture, biometrics, IoT and computer vision.</p>
-    </div>
+        <div class="now-strip reveal">
+          <div><strong>Current areas of focus</strong><br><span>Railway sign recognition · Underwater sensing · Agricultural robotics · Embedded AI</span></div>
+          <div class="availability"><span class="pulse"></span> Open to meaningful engineering opportunities</div>
+        </div>
+      </div>
+    </section>
 
-    <div class="project-grid">
-        <article class="project reveal">
-            <span class="project-number" aria-hidden="true">01</span><div class="project-icon"><i class="fa-solid fa-water"></i></div>
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">02 · Selected work</div><h2>Ideas I've<br><span class="gradient">built and explored.</span></h2></div>
+          <p>A selection of projects across agricultural technology, embedded systems, sensing, robotics and computer vision. Open a repository where a public project link is available.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-water"></i></div><span class="project-index">01</span></div>
             <h3>Samudra MET</h3>
-            <p>An underwater mineral exploration and detection pod combining magnetometer, electromagnetic sensing, IMU, pressure, temperature/conductivity and location tracking for subsea data collection.</p>
-            <div class="tags"><span class="tag">Underwater Tech</span><span class="tag">Sensors</span><span class="tag">AI / Data</span><span class="tag">SIH 2026</span></div>
-        </article>
+            <p>An underwater sensing pod concept for mineral exploration and subsea data collection, integrating magnetometer, electromagnetic sensing, IMU, pressure and temperature/conductivity sensors.</p>
+            <div class="tag-list"><span class="tag">Underwater Systems</span><span class="tag">Sensors</span><span class="tag">Embedded</span><span class="tag">Data Acquisition</span></div>
+            <div class="project-footer"><span class="project-note">Concept and system development</span></div>
+          </article>
 
-        <article class="project reveal">
-            <span class="project-number" aria-hidden="true">02</span><div class="project-icon"><i class="fa-solid fa-tractor"></i></div>
-            <h3>AGRIV — Autonomous Pesticide Robot</h3>
-            <p>An autonomous agricultural platform designed for safer and more precise pesticide spraying, integrating robotics, sensing, camera vision and environmental monitoring.</p>
-            <div class="tags"><span class="tag">Robotics</span><span class="tag">IoT</span><span class="tag">AgriTech</span><span class="tag">Automation</span></div>
-        </article>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-tractor"></i></div><span class="project-index">02</span></div>
+            <h3>AGRIV V1 — RC Agricultural Utility Platform</h3>
+            <p>A heavy-duty, remote-controlled agricultural platform developed for pesticide spraying and utility applications. The platform is RC-controlled, not autonomous, with a focus on practical field operation.</p>
+            <div class="tag-list"><span class="tag">AgriTech</span><span class="tag">RC Control</span><span class="tag">Robotics</span><span class="tag">Spraying System</span></div>
+            <div class="project-footer"><span class="project-note">Avyuktam Innovations</span></div>
+          </article>
 
-        <article class="project reveal">
-            <span class="project-number" aria-hidden="true">03</span><div class="project-icon"><i class="fa-solid fa-wave-square"></i></div>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-wave-square"></i></div><span class="project-index">03</span></div>
             <h3>STEM Borer Detection</h3>
-            <p>A low-cost automated pest-detection concept using wingbeat-frequency analysis, environmental monitoring and instant alerts to support early intervention.</p>
-            <div class="tags"><span class="tag">Sensors</span><span class="tag">Signal Analysis</span><span class="tag">AgriTech</span></div>
-            <div class="project-footer"><span class="status-line">Source available</span><a class="project-link" href="https://github.com/Varunsd7/STEM-Borer-Detection" target="_blank" rel="noopener noreferrer" aria-label="STEM Borer Detection on GitHub (opens in new tab)">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-        </article>
+            <p>A low-cost pest-monitoring prototype using an ESP32, microphone-based sound sensing and environmental measurements to explore insect wingbeat detection and alerting.</p>
+            <div class="tag-list"><span class="tag">ESP32</span><span class="tag">KY-037</span><span class="tag">DHT22</span><span class="tag">Telegram Bot</span></div>
+            <div class="project-footer"><span class="project-note">Source available</span><a class="project-link" href="https://github.com/Varunsd7/STEM-Borer-Detection" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
 
-        <article class="project reveal">
-            <span class="project-number" aria-hidden="true">04</span><div class="project-icon"><i class="fa-solid fa-leaf"></i></div>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-train"></i></div><span class="project-index">04</span></div>
+            <h3>Recognition and Detection of Trackside Railway Signs</h3>
+            <p>A computer-vision project focused on building and annotating an Indian railway trackside-sign dataset, covering 18 proposed sign categories and varied environmental conditions.</p>
+            <div class="tag-list"><span class="tag">Computer Vision</span><span class="tag">COCO JSON</span><span class="tag">Roboflow</span><span class="tag">Object Detection</span></div>
+            <div class="project-footer"><span class="project-note">Dataset: 280 raw images · Model evaluation planned</span></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-leaf"></i></div><span class="project-index">05</span></div>
             <h3>Grape Leaf Disease & Pest Detection</h3>
-            <p>A Raspberry Pi-based computer-vision system for analyzing crop leaves with AI/ML to support early identification of disease or pest-related issues.</p>
-            <div class="tags"><span class="tag">Raspberry Pi</span><span class="tag">Computer Vision</span><span class="tag">ML</span><span class="tag">AgriTech</span></div>
-        </article>
+            <p>A Raspberry Pi-oriented computer-vision concept for analyzing grape leaves and exploring AI-assisted identification of crop disease or pest-related symptoms.</p>
+            <div class="tag-list"><span class="tag">Raspberry Pi</span><span class="tag">Computer Vision</span><span class="tag">AI / ML</span><span class="tag">Agriculture</span></div>
+            <div class="project-footer"><span class="project-note">Prototype exploration</span></div>
+          </article>
 
-        <article class="project reveal">
-            <span class="project-number" aria-hidden="true">05</span><div class="project-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
-            <h3>Magnetic GPS Tracker</h3>
-            <p>A compact GPS/GSM tracking concept designed for location monitoring, with hands-on embedded development and real-world deployment considerations.</p>
-            <div class="tags"><span class="tag">GPS</span><span class="tag">GSM</span><span class="tag">Embedded</span><span class="tag">IoT</span></div>
-        </article>
-
-        <article class="project reveal">
-            <span class="project-number" aria-hidden="true">06</span><div class="project-icon"><i class="fa-solid fa-fingerprint"></i></div>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-fingerprint"></i></div><span class="project-index">06</span></div>
             <h3>Smart Exam Hall Center</h3>
-            <p>RFID + fingerprint verification using ESP32, with real-time attendance monitoring and Telegram notifications for secure, automated examination management.</p>
-            <div class="tags"><span class="tag">ESP32</span><span class="tag">Biometrics</span><span class="tag">IoT</span></div>
-            <div class="project-footer"><span class="status-line">Source available</span><a class="project-link" href="https://github.com/Varunsd7/Exam_Hall" target="_blank" rel="noopener noreferrer" aria-label="Smart Exam Hall Center on GitHub (opens in new tab)">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-        </article>
+            <p>An RFID and fingerprint-based attendance and verification system using ESP32, with real-time monitoring and Telegram notification functionality.</p>
+            <div class="tag-list"><span class="tag">ESP32</span><span class="tag">RFID</span><span class="tag">Fingerprint</span><span class="tag">IoT</span></div>
+            <div class="project-footer"><span class="project-note">Source available</span><a class="project-link" href="https://github.com/Varunsd7/Exam_Hall" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
 
-        <article class="project reveal">
-            <span class="project-number" aria-hidden="true">07</span><div class="project-icon"><i class="fa-solid fa-temperature-half"></i></div>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-temperature-half"></i></div><span class="project-index">07</span></div>
             <h3>Smart Onion Storage</h3>
-            <p>IoT-based monitoring and automated ventilation designed to reduce post-harvest losses by maintaining better temperature, humidity and airflow conditions.</p>
-            <div class="tags"><span class="tag">IoT</span><span class="tag">Sensors</span><span class="tag">Agriculture</span></div>
-            <div class="project-footer"><span class="status-line">Source available</span><a class="project-link" href="https://github.com/Varunsd7/Onion_Storage_Sys" target="_blank" rel="noopener noreferrer" aria-label="Smart Onion Storage on GitHub (opens in new tab)">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-        </article>
+            <p>An IoT-based storage monitoring system using environmental and gas sensing, with a manually controlled ventilation fan through a connected dashboard.</p>
+            <div class="tag-list"><span class="tag">ESP32</span><span class="tag">DHT22</span><span class="tag">MQ-135</span><span class="tag">Blynk</span></div>
+            <div class="project-footer"><span class="project-note">Source available</span><a class="project-link" href="https://github.com/Varunsd7/Onion_Storage_Sys" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
 
-        <article class="project reveal">
-            <span class="project-number" aria-hidden="true">08</span><div class="project-icon"><i class="fa-solid fa-user-doctor"></i></div>
-            <h3>Medical Diagnosis Management Platform</h3>
-            <p>A web-based concept for organizing medical diagnosis and management workflows, extending my work beyond hardware into practical software systems.</p>
-            <div class="tags"><span class="tag">Web</span><span class="tag">Software</span><span class="tag">Healthcare Tech</span></div>
-        </article>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-location-crosshairs"></i></div><span class="project-index">08</span></div>
+            <h3>Magnetic GPS Tracker</h3>
+            <p>A compact GPS/GSM tracking concept exploring location reporting, embedded communication and practical deployment considerations.</p>
+            <div class="tag-list"><span class="tag">GPS</span><span class="tag">GSM</span><span class="tag">Embedded C</span><span class="tag">IoT</span></div>
+            <div class="project-footer"><span class="project-note">Embedded systems project</span></div>
+          </article>
 
-        <article class="project reveal">
-            <span class="project-number" aria-hidden="true">09</span><div class="project-icon"><i class="fa-solid fa-atom"></i></div>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-atom"></i></div><span class="project-index">09</span></div>
             <h3>Ionic Plasma Thruster</h3>
-            <p>Exploration of ion-based spacecraft propulsion, covering operating principles, performance characteristics, applications and ongoing development.</p>
-            <div class="tags"><span class="tag">Propulsion</span><span class="tag">Physics</span><span class="tag">Space Tech</span></div>
+            <p>An exploration of ion-based spacecraft propulsion, including operating principles, performance characteristics, applications and engineering challenges.</p>
+            <div class="tag-list"><span class="tag">Propulsion</span><span class="tag">Physics</span><span class="tag">Space Technology</span></div>
+            <div class="project-footer"><span class="project-note">Innovation project</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">03 · Capabilities</div><h2>My technical<br><span class="gradient">toolkit.</span></h2></div>
+          <p>Tools and disciplines I use to move from a problem statement to a working engineering prototype.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill reveal"><i class="fa-solid fa-microchip"></i><h3>Hardware & Embedded</h3><ul><li>ESP32 / ESP8266</li><li>Arduino</li><li>Raspberry Pi</li><li>STM32 fundamentals</li><li>Sensor integration</li><li>IoT systems</li><li>Circuit prototyping</li></ul></article>
+          <article class="skill reveal"><i class="fa-solid fa-code"></i><h3>Programming</h3><ul><li>C and C++</li><li>Python</li><li>MATLAB</li><li>HTML and CSS</li><li>Arduino IDE</li><li>Firmware development</li></ul></article>
+          <article class="skill reveal"><i class="fa-solid fa-brain"></i><h3>AI & Computer Vision</h3><ul><li>Image annotation</li><li>COCO dataset format</li><li>Object detection workflows</li><li>TensorFlow / PyTorch exposure</li><li>Dataset preparation</li><li>AI/ML exploration</li></ul></article>
+          <article class="skill reveal"><i class="fa-solid fa-people-group"></i><h3>Leadership</h3><ul><li>Project coordination</li><li>Team collaboration</li><li>Technical presentations</li><li>Public speaking</li><li>Hackathon pitching</li><li>Event organization</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">04 · Experience</div><h2>Building beyond<br><span class="gradient">the classroom.</span></h2></div>
+          <p>Research exposure, entrepreneurship and hands-on problem solving through projects and innovation competitions.</p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="panel experience-card reveal">
+            <div class="kicker">Research experience</div>
+            <h3>Research Intern</h3>
+            <div class="date">JULY 2026 — OCTOBER 2026</div>
+            <p>Completed a research internship in a professional R&D environment, gaining exposure to engineering research, experimentation, technical workflows and structured problem solving.</p>
+            <div class="tag-list"><span class="tag">Research & Development</span><span class="tag">Engineering</span><span class="tag">Technical Research</span></div>
+          </article>
+
+          <article class="panel experience-card reveal">
+            <div class="kicker">Entrepreneurship</div>
+            <h3>Co-Founder & Director</h3>
+            <div class="date">AVYUKTAM INNOVATIONS PVT. LTD.</div>
+            <p>Working with a multidisciplinary team to identify real-world problems, develop technology-driven solutions, build prototypes and present ideas through innovation competitions and industry-facing opportunities.</p>
+            <div class="tag-list"><span class="tag">Entrepreneurship</span><span class="tag">Product Development</span><span class="tag">AgriTech</span><span class="tag">R&D</span></div>
+          </article>
+        </div>
+
+        <article class="panel reveal" style="margin-top:18px">
+          <div class="kicker">Selected milestones</div>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="date">2026</div><h3>National-Level Ideathon Winner</h3><p>Won with Team Avyuktam Innovations at an ideathon organized by KIT's College of Engineering, Kolhapur, in collaboration with DBATU, Punyashlok Ahilyadevi Holkar Solapur University and Udyam.</p></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="date">2025</div><h3>International Agri Hackathon Winner</h3><p>Won in Pune with an agricultural technology solution and received a ₹25 lakh prize.</p></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="date">2025</div><h3>AI Policy & Innovation Exposure</h3><p>Represented Avyuktam Innovations at the Government of Maharashtra's AI Policy Conference.</p></div>
+          </div>
         </article>
-    </div>
-</div>
-</section>
+      </div>
+    </section>
 
-<section id="skills">
-<div class="container">
-    <div class="section-head reveal">
-        <div><div class="kicker">03 · Capabilities</div><h2>My technical<br><span class="gradient">toolkit.</span></h2></div>
-        <p>Technologies I use to move from an idea on paper to a working prototype.</p>
-    </div>
-    <div class="skills">
-        <div class="skill reveal"><i class="fa-solid fa-microchip" aria-hidden="true"></i><h3>Hardware</h3><ul><li>Embedded Systems Design</li><li>IoT Development</li><li>STM32</li><li>Circuit Design</li><li>Sensor Integration</li><li>GPS / GSM</li><li>Raspberry Pi / ESP32 / Arduino</li></ul></div>
-        <div class="skill reveal"><i class="fa-solid fa-code" aria-hidden="true"></i><h3>Programming</h3><ul><li>C & C++</li><li>Python</li><li>MATLAB</li><li>HTML + CSS</li><li>Java</li></ul></div>
-        <div class="skill reveal"><i class="fa-solid fa-brain" aria-hidden="true"></i><h3>AI / ML</h3><ul><li>Computer Vision</li><li>Prompt Engineering</li><li>Generative AI</li><li>TensorFlow / PyTorch</li><li>Google Vertex AI</li><li>AI-assisted Development</li><li>Dataset & Model Exploration</li></ul></div>
-        <div class="skill reveal"><i class="fa-solid fa-users" aria-hidden="true"></i><h3>Leadership</h3><ul><li>Project Management</li><li>Team Collaboration</li><li>Public Speaking</li><li>Problem Solving</li><li>Multilingual Communication</li><li>Hackathon Team Leadership</li><li>Pitching & Presentations</li></ul></div>
-    </div>
-</div>
-</section>
+    <section id="achievements">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">05 · Recognition</div><h2>Milestones along<br><span class="gradient">the journey.</span></h2></div>
+          <p>Recognition across innovation competitions, entrepreneurship, leadership and competitive sport.</p>
+        </div>
+        <div class="achievement-grid">
+          <article class="achievement reveal"><i class="fa-solid fa-trophy"></i><div><h3>International Agri Hackathon Winner · 2025</h3><p>Won in Pune with an agri-tech solution and received a ₹25 lakh prize.</p></div></article>
+          <article class="achievement reveal"><i class="fa-solid fa-award"></i><div><h3>National-Level Ideathon Winner · 2026</h3><p>Won with Team Avyuktam Innovations at KIT's College of Engineering, Kolhapur.</p></div></article>
+          <article class="achievement reveal"><i class="fa-solid fa-flag"></i><div><h3>Smart India Hackathon Winner · 2024</h3><p>Recognized for developing a solution to a national-level problem statement.</p></div></article>
+          <article class="achievement reveal"><i class="fa-solid fa-medal"></i><div><h3>Innovation Competition Wins · 2024–2025</h3><p>Recognition at Ionic Plasma Thruster, Kalpak, InnovateYou and other innovation events.</p></div></article>
+          <article class="achievement reveal"><i class="fa-solid fa-person-swimming"></i><div><h3>Competitive Swimming & Diving</h3><p>12-time national-level player, with five gold medals and one bronze medal; participated in All India University Diving events.</p></div></article>
+          <article class="achievement reveal"><i class="fa-solid fa-people-group"></i><div><h3>Student Leadership</h3><p>Contributed as Sports Secretary, ISTE Secretary and NSS Coordinator, including organizing STROKE events.</p></div></article>
+        </div>
+      </div>
+    </section>
 
-<section id="experience">
-<div class="container">
-    <div class="section-head reveal">
-        <div><div class="kicker">04 · Experience</div><h2>Building beyond<br><span class="gradient">the classroom.</span></h2></div>
-        <p>Leadership, entrepreneurship and hands-on engineering experience developed through Avyuktam Innovations and competitive problem solving.</p>
-    </div>
-    <div class="about-grid">
-        <div class="panel reveal" style="border-color:rgba(139,92,246,.35);box-shadow:0 18px 60px rgba(139,92,246,.12)">
-            <div class="kicker">01 · DRDO</div>
-            <h3 class="mono" style="font-size:1.55rem;margin:10px 0 8px">Research Intern</h3>
-            <div class="date" style="margin-bottom:14px">JUL 2026 — OCT 2026</div>
-            <p>Completed a research internship with the <strong>Defence Research and Development Organisation (DRDO)</strong>, gaining exposure to a professional R&D environment and defence-oriented engineering workflows.</p>
-            <p style="margin-top:10px">This experience strengthened my practical understanding of research, experimentation, engineering discipline and technology development.</p>
-            <div class="tags">
-                <span class="tag">DRDO</span><span class="tag">Research & Development</span><span class="tag">Defence Tech</span><span class="tag">Engineering</span>
-            </div>
+    <section id="journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">06 · Education</div><h2>Learning with<br><span class="gradient">intent.</span></h2></div>
+          <p>The academic foundation and ongoing learning that support my engineering work.</p>
+        </div>
+        <div class="about-grid">
+          <article class="panel reveal">
+            <div class="kicker">2023 — 2027</div>
+            <h3 class="mono" style="font-size:1.25rem;margin:10px 0 6px">Walchand Institute of Technology, Solapur</h3>
+            <p>B.Tech in Electronics & Computer Engineering</p>
+            <p>Minor Degree in Information Technology</p>
+            <div class="tag-list"><span class="tag">CGPA 9.0</span><span class="tag">Batch B2</span></div>
+          </article>
+          <article class="panel reveal">
+            <div class="kicker">Selected learning</div>
+            <h3 class="mono" style="font-size:1.25rem;margin:10px 0 6px">AI, Cloud & Electronics</h3>
+            <p>Learning across prompt design, Vertex AI, MLOps for Generative AI, microsensors and nanosensors, databases, SQL and C++ programming.</p>
+            <div class="tag-list"><span class="tag">AI / ML</span><span class="tag">Cloud</span><span class="tag">Sensors</span><span class="tag">Programming</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">07 · Beyond the screen</div><h2>The journey<br><span class="gradient">in pictures.</span></h2></div>
+          <p>Competition moments, sporting milestones and snapshots from the journey behind the projects.</p>
+        </div>
+        <div class="gallery-tabs reveal" role="tablist" aria-label="Gallery categories">
+          <button class="gallery-tab" id="tab-competition" role="tab" aria-controls="competition-gallery" aria-selected="true" data-category="competition" type="button">Competitions</button>
+          <button class="gallery-tab" id="tab-sports" role="tab" aria-controls="sports-gallery" aria-selected="false" data-category="sports" type="button">Sports</button>
+          <button class="gallery-tab" id="tab-moments" role="tab" aria-controls="moments-gallery" aria-selected="false" data-category="moments" type="button">Moments</button>
         </div>
 
-        <div class="panel reveal">
-            <div class="kicker">02 · Avyuktam Innovations Pvt. Ltd.</div>
-            <h3 class="mono" style="font-size:1.55rem;margin:10px 0 8px">Co-Founder & Director</h3>
-            <p>Working with a multidisciplinary team to identify real-world problems, design technology-driven solutions, build prototypes and present them through innovation competitions and industry-facing opportunities.</p>
-            <div class="tags">
-                <span class="tag">Entrepreneurship</span><span class="tag">R&D</span><span class="tag">Product Development</span>
-                <span class="tag">AgriTech</span><span class="tag">AI</span><span class="tag">IoT</span>
-            </div>
+        <div class="gallery-grid active" id="competition-gallery" role="tabpanel" aria-labelledby="tab-competition">
+          <button class="gallery-item" type="button" aria-label="Open competition photograph"><img src="IMG-20250605-WA0040.jpg" alt="Competition event" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open competition photograph"><img src="IMG_20250223_200848309.jpg" alt="Competition event" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open competition photograph"><img src="IMG-20241213-WA0017.jpg" alt="Competition event" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open competition photograph"><img src="IMG-20241215-WA0043.jpg" alt="Competition event" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open competition photograph"><img src="IMG-20241215-WA0066.jpg" alt="Competition event" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open competition photograph"><img src="IMG-20250604-WA0004.jpg" alt="Competition event" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open competition photograph"><img src="WhatsApp%20Image%202025-04-19%20at%2019.51.22_9f1eb38c.jpg" alt="Competition event" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open competition photograph"><img src="pcoe.jpg" alt="Competition event" loading="lazy"></button>
         </div>
-    </div>
 
-    <div class="panel reveal" style="margin-top:22px">
-        <div class="kicker">Selected milestones</div>
-        <div class="timeline" style="margin-top:24px">
-            <div class="t-item"><span class="t-dot"></span><div class="date">2026</div><h3>National-Level Ideathon Winner</h3><p>Won a national-level ideathon organized by KIT's College of Engineering, Kolhapur in collaboration with DBATU, Punyashlok Ahilyadevi Holkar Solapur University and Udyam, representing Team Avyuktam Innovations.</p></div>
-            <div class="t-item"><span class="t-dot"></span><div class="date">2025</div><h3>International Agri Hackathon Winner</h3><p>Won the International Agri Hackathon in Pune with a ₹25 Lakh cash prize for an innovative agri-tech solution.</p></div>
-            <div class="t-item"><span class="t-dot"></span><div class="date">2025</div><h3>AI Policy & Innovation Exposure</h3><p>Represented Avyuktam Innovations at the Government of Maharashtra's AI Policy Conference and gained exposure to the wider AI innovation ecosystem.</p></div>
+        <div class="gallery-grid" id="sports-gallery" role="tabpanel" aria-labelledby="tab-sports">
+          <button class="gallery-item" type="button" aria-label="Open sports photograph"><img src="IMG-20241226-WA0058.jpg" alt="Sports and diving" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open sports photograph"><img src="IMG-20241226-WA0059.jpg" alt="Sports and diving" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open sports photograph"><img src="IMG-20241229-WA0019.jpg" alt="Sports and diving" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open sports photograph"><img src="WhatsApp%20Image%202025-04-25%20at%2012.08.49_3856f6ca.jpg" alt="Sports event" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open sports photograph"><img src="WhatsApp%20Image%202025-04-25%20at%2012.08.48_25cd05c0.jpg" alt="Sports event" loading="lazy"></button>
         </div>
-    </div>
-</div>
-</section>
 
-<section id="journey">
-<div class="container">
-    <div class="section-head reveal">
-        <div><div class="kicker">05 · Journey</div><h2>Learning,<br><span class="gradient">competing & building.</span></h2></div>
-        <p>Education, certifications and milestones that shaped my engineering journey.</p>
-    </div>
-    <div class="about-grid">
-        <div class="panel reveal">
-            <div class="kicker">Education</div>
-            <div class="timeline" style="margin-top:24px">
-                <div class="t-item"><span class="t-dot"></span><div class="date">2023 — 2027</div><h3>Walchand Institute of Technology, Solapur</h3><p>B.Tech in Electronics & Computer Engineering · Minor Degree in Information Technology · CGPA 9.0</p></div>
-                <div class="t-item"><span class="t-dot"></span><div class="date">CERTIFICATIONS</div><h3>AI, Cloud & Embedded Learning</h3><p>Prompt Design in Vertex AI · MLOps for Generative AI · Introduction to Vertex AI Studio · Microsensors and Nanosensors · Database and SQL · Programming in C++</p></div>
-            </div>
+        <div class="gallery-grid" id="moments-gallery" role="tabpanel" aria-labelledby="tab-moments">
+          <button class="gallery-item" type="button" aria-label="Open personal photograph"><img src="1741102377603.jpg" alt="Personal moment" loading="lazy"></button>
+          <button class="gallery-item" type="button" aria-label="Open personal photograph"><img src="1744302780240.jpg" alt="Personal moment" loading="lazy"></button>
         </div>
-        <div class="panel reveal">
-            <div class="kicker">Current direction</div>
-            <div class="timeline" style="margin-top:24px">
-                <div class="t-item"><span class="t-dot"></span><div class="date">NOW</div><h3>Deep-Tech R&D</h3><p>Building on my DRDO research internship, exploring intelligent hardware, underwater sensing, computer vision, robotics and data-driven systems that can move from prototype to practical deployment.</p></div>
-                <div class="t-item"><span class="t-dot"></span><div class="date">NEXT</div><h3>Build → Validate → Scale</h3><p>Focused on stronger prototypes, better datasets, robust engineering and solutions that create measurable real-world value.</p></div>
-            </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="kicker">08 · Contact</div>
+          <h2>Let's build something<br><span class="gradient">meaningful.</span></h2>
+          <p>Open to engineering collaborations, research opportunities, startup initiatives and ambitious projects — especially where electronics, embedded systems and real-world problem solving come together.</p>
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:varundornal272005@gmail.com"><i class="fa-solid fa-envelope"></i>Email me</a>
+            <button class="btn" id="copyEmail" type="button"><i class="fa-solid fa-copy"></i>Copy email</button>
+            <a class="btn" href="https://www.linkedin.com/in/varundornal2705/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/varunsd7" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/varundornal2705/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/varunsd_17" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/varundornal_18" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
         </div>
-    </div>
-</div>
-</section>
+      </div>
+    </section>
+  </main>
 
-<section id="achievements">
-<div class="container">
-    <div class="section-head reveal">
-        <div><div class="kicker">06 · Recognition</div><h2>Proof of<br><span class="gradient">the journey.</span></h2></div>
-        <p>Competitions and milestones that reflect my approach to building, leading and solving real-world problems.</p>
-    </div>
-    <div class="achievements">
-        <article class="achievement reveal"><i class="fa-solid fa-trophy" aria-hidden="true"></i><div><h3>Winner — National-Level Ideathon · KIT's College of Engineering, Kolhapur · 2026</h3><p>Won with Team Avyuktam Innovations in an ideathon organized in collaboration with DBATU, Punyashlok Ahilyadevi Holkar Solapur University and Udyam.</p></div></article>
-        <article class="achievement reveal"><i class="fa-solid fa-award" aria-hidden="true"></i><div><h3>Winner — International Agri Hackathon · Pune · 2025</h3><p>Won with an innovative agri-tech solution and received a ₹25 Lakh cash prize.</p></div></article>
-        <article class="achievement reveal"><i class="fa-solid fa-flag" aria-hidden="true"></i><div><h3>Winner — Smart India Hackathon · 2024–25</h3><p>Led a team to develop a solution for a national-level problem statement.</p></div></article>
-        <article class="achievement reveal"><i class="fa-solid fa-medal" aria-hidden="true"></i><div><h3>Multiple Innovation Competition Podiums · 2024–25</h3><p>1st Place at Kalpak 2024 and WITchar 2025 Innoverse; 1st Runner-Up at InnovateYou 2025 and Technovation 2k25 rounds.</p></div></article>
-        <article class="achievement reveal"><i class="fa-solid fa-landmark" aria-hidden="true"></i><div><h3>Represented Avyuktam Innovations · Maharashtra AI Policy Conference</h3><p>Presented and represented the innovation ecosystem at a Government of Maharashtra AI policy-focused conference.</p></div></article>
-        <article class="achievement reveal"><i class="fa-solid fa-person-running" aria-hidden="true"></i><div><h3>Competitive Sports</h3><p>Participated in All India University and South-West Zone Diving Championships and represented college in district-level university basketball.</p></div></article>
-    </div>
-</div>
-</section>
+  <footer><div class="container">© <span id="year">2026</span> <strong>Varun Dornal</strong> · Engineer · Innovator · Builder</div></footer>
 
-<section id="gallery">
-<div class="container">
-    <div class="section-head reveal">
-        <div><div class="kicker">07 · Beyond the screen</div><h2>The journey<br><span class="gradient">in pictures.</span></h2></div>
-        <p>Competitions, sports and moments from the journey behind the projects.</p>
-    </div>
-    <div class="gallery-tabs reveal" role="tablist" aria-label="Gallery categories">
-        <button class="gallery-tab" role="tab" id="tab-competition" aria-controls="competition-gallery" aria-selected="true" data-category="competition" type="button">Competitions</button>
-        <button class="gallery-tab" role="tab" id="tab-sports" aria-controls="sports-gallery" aria-selected="false" data-category="sports" type="button">Sports</button>
-        <button class="gallery-tab" role="tab" id="tab-snaps" aria-controls="snaps-gallery" aria-selected="false" data-category="snaps" type="button">Moments</button>
-    </div>
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast" role="status" aria-live="polite">Email copied</div>
 
-    <div class="gallery-grid active" id="competition-gallery" role="tabpanel" aria-labelledby="tab-competition">
-        <button class="gallery-item" type="button" aria-label="Open competition photo 1"><img loading="lazy" decoding="async" src="IMG-20250605-WA0040.jpg" alt="Competition photo 1"></button>
-        <button class="gallery-item" type="button" aria-label="Open competition photo 2"><img loading="lazy" decoding="async" src="IMG_20250223_200848309.jpg" alt="Competition photo 2"></button>
-        <button class="gallery-item" type="button" aria-label="Open competition photo 3"><img loading="lazy" decoding="async" src="IMG-20241213-WA0017.jpg" alt="Competition photo 3"></button>
-        <button class="gallery-item" type="button" aria-label="Open competition photo 4"><img loading="lazy" decoding="async" src="IMG-20241215-WA0043.jpg" alt="Competition photo 4"></button>
-        <button class="gallery-item" type="button" aria-label="Open competition photo 5"><img loading="lazy" decoding="async" src="IMG-20241215-WA0066.jpg" alt="Competition photo 5"></button>
-        <button class="gallery-item" type="button" aria-label="Open competition photo 6"><img loading="lazy" decoding="async" src="IMG-20250604-WA0004.jpg" alt="Competition photo 6"></button>
-        <button class="gallery-item" type="button" aria-label="Open competition photo 7"><img loading="lazy" decoding="async" src="WhatsApp%20Image%202025-04-19%20at%2019.51.22_9f1eb38c.jpg" alt="Competition photo 7"></button>
-        <button class="gallery-item" type="button" aria-label="Open competition photo 8"><img loading="lazy" decoding="async" src="pcoe.jpg" alt="Competition photo 8"></button>
-    </div>
-
-    <div class="gallery-grid" id="sports-gallery" role="tabpanel" aria-labelledby="tab-sports">
-        <button class="gallery-item" type="button" aria-label="Open sports photo 1"><img loading="lazy" decoding="async" src="IMG-20241226-WA0058.jpg" alt="Sports photo 1"></button>
-        <button class="gallery-item" type="button" aria-label="Open sports photo 2"><img loading="lazy" decoding="async" src="IMG-20241226-WA0059.jpg" alt="Sports photo 2"></button>
-        <button class="gallery-item" type="button" aria-label="Open sports photo 3"><img loading="lazy" decoding="async" src="IMG-20241229-WA0019.jpg" alt="Sports photo 3"></button>
-        <button class="gallery-item" type="button" aria-label="Open sports photo 4"><img loading="lazy" decoding="async" src="WhatsApp%20Image%202025-04-25%20at%2012.08.49_3856f6ca.jpg" alt="Sports photo 4"></button>
-        <button class="gallery-item" type="button" aria-label="Open sports photo 5"><img loading="lazy" decoding="async" src="WhatsApp%20Image%202025-04-25%20at%2012.08.48_25cd05c0.jpg" alt="Sports photo 5"></button>
-    </div>
-
-    <div class="gallery-grid" id="snaps-gallery" role="tabpanel" aria-labelledby="tab-snaps">
-        <button class="gallery-item" type="button" aria-label="Open photo 1"><img loading="lazy" decoding="async" src="1741102377603.jpg" alt="Personal moment 1"></button>
-        <button class="gallery-item" type="button" aria-label="Open photo 2"><img loading="lazy" decoding="async" src="1744302780240.jpg" alt="Personal moment 2"></button>
-    </div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-    <div class="contact reveal">
-        <div class="kicker">08 · Contact</div>
-        <h2>Let's build something<br><span class="gradient">worth remembering.</span></h2>
-        <p>Open to research, engineering collaborations, startup opportunities, competitions and ambitious ideas — especially where hardware, AI and real-world problem solving come together.</p>
-        <div class="hero-actions" style="justify-content:center">
-            <a class="btn primary" href="mailto:varundornal272005@gmail.com"><i class="fa-solid fa-envelope"></i> Email me</a>
-            <button class="btn secondary" id="copyEmail" type="button"><i class="fa-solid fa-copy"></i> Copy email</button>
-            <a class="btn secondary" href="https://www.linkedin.com/in/varundornal2705/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-        </div>
-        <div class="socials" style="margin-top:22px">
-            <a href="https://github.com/varunsd7" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/varundornal2705/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/varunsd_17" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/varundornal_18" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-    </div>
-</div>
-</section>
-</main>
-
-<footer>
-    <div class="container">© 2026 <span>Varun Dornal</span> · Engineer · Innovator · Builder · Avyuktam Innovations</div>
-</footer>
-
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-<div class="copy-toast" id="copyToast" role="status" aria-live="polite">Email copied</div>
-<button class="back-top" id="backTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Expanded gallery image" aria-hidden="true">
-    <button class="close" id="closeModal" type="button" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Expanded gallery image" aria-hidden="true">
+    <button class="modal-close" id="closeModal" type="button" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
     <img id="modalImg" src="" alt="">
-</div>
+  </div>
 
-<script>
-(function(){
-    'use strict';
+  <script>
+    (() => {
+      "use strict";
 
-    /* Scroll progress + back to top (rAF-throttled) */
-    var scrollProgress = document.getElementById('scrollProgress');
-    var backTop = document.getElementById('backTop');
-    var ticking = false;
-    function updateScrollUI(){
-        var scrollable = document.documentElement.scrollHeight - window.innerHeight;
-        var progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
-        scrollProgress.style.transform = 'scaleX(' + progress + ')';
-        backTop.classList.toggle('show', window.scrollY > 600);
-        ticking = false;
-    }
-    window.addEventListener('scroll', function(){
-        if(!ticking){ ticking = true; requestAnimationFrame(updateScrollUI); }
-    }, {passive:true});
-    window.addEventListener('resize', updateScrollUI);
-    updateScrollUI();
-    backTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+      const $ = (selector, root = document) => root.querySelector(selector);
+      const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
-    /* Copy email */
-    var EMAIL = 'varundornal272005@gmail.com';
-    var copyToast = document.getElementById('copyToast');
-    document.getElementById('copyEmail').addEventListener('click', function(){
-        function done(){
-            copyToast.classList.add('show');
-            setTimeout(function(){ copyToast.classList.remove('show'); }, 1800);
+      // Mobile navigation
+      const menuBtn = $("#menuBtn");
+      const navLinks = $("#navLinks");
+      const setMenu = (open) => {
+        navLinks.classList.toggle("open", open);
+        menuBtn.setAttribute("aria-expanded", String(open));
+        menuBtn.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+        $("i", menuBtn).className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+      };
+      menuBtn.addEventListener("click", () => setMenu(!navLinks.classList.contains("open")));
+      $$("#navLinks a").forEach(link => link.addEventListener("click", () => setMenu(false)));
+      document.addEventListener("click", event => {
+        if (navLinks.classList.contains("open") && !event.target.closest("nav")) setMenu(false);
+      });
+
+      // Scroll progress and back-to-top
+      const progress = $("#progress");
+      const backTop = $("#backTop");
+      let scrollTicking = false;
+      const updateScroll = () => {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.transform = `scaleX(${maxScroll > 0 ? window.scrollY / maxScroll : 0})`;
+        backTop.classList.toggle("show", window.scrollY > 550);
+        scrollTicking = false;
+      };
+      window.addEventListener("scroll", () => {
+        if (!scrollTicking) {
+          scrollTicking = true;
+          requestAnimationFrame(updateScroll);
         }
-        if(navigator.clipboard && navigator.clipboard.writeText){
-            navigator.clipboard.writeText(EMAIL).then(done, function(){ window.location.href = 'mailto:' + EMAIL; });
-        } else {
-            window.location.href = 'mailto:' + EMAIL;
+      }, { passive: true });
+      window.addEventListener("resize", updateScroll);
+      updateScroll();
+      backTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+      // Reveal animations, with a safe fallback
+      const revealItems = $$(".reveal");
+      if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const revealObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealItems.forEach(item => revealObserver.observe(item));
+      } else {
+        revealItems.forEach(item => item.classList.add("visible"));
+      }
+
+      // Active navigation state
+      if ("IntersectionObserver" in window) {
+        const sections = $$("main section[id]");
+        const navObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            $$("#navLinks a[href^='#']").forEach(link => {
+              const active = link.getAttribute("href") === `#${entry.target.id}`;
+              link.classList.toggle("active", active);
+              if (active) link.setAttribute("aria-current", "location");
+              else link.removeAttribute("aria-current");
+            });
+          });
+        }, { rootMargin: "-35% 0px -55% 0px" });
+        sections.forEach(section => navObserver.observe(section));
+      }
+
+      // Gallery tabs and keyboard navigation
+      const tabs = $$(".gallery-tab");
+      const selectTab = tab => {
+        tabs.forEach(item => {
+          const selected = item === tab;
+          item.setAttribute("aria-selected", String(selected));
+          item.tabIndex = selected ? 0 : -1;
+          $(`#${item.dataset.category}-gallery`).classList.toggle("active", selected);
+        });
+      };
+      tabs.forEach((tab, index) => {
+        tab.tabIndex = index === 0 ? 0 : -1;
+        tab.addEventListener("click", () => selectTab(tab));
+        tab.addEventListener("keydown", event => {
+          const direction = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
+          if (!direction) return;
+          event.preventDefault();
+          const next = tabs[(index + direction + tabs.length) % tabs.length];
+          selectTab(next);
+          next.focus();
+        });
+      });
+
+      // Accessible image lightbox
+      const modal = $("#modal");
+      const modalImg = $("#modalImg");
+      const closeModalBtn = $("#closeModal");
+      let lastFocusedElement = null;
+      const closeModal = () => {
+        modal.classList.remove("show");
+        modal.setAttribute("aria-hidden", "true");
+        modalImg.removeAttribute("src");
+        document.body.style.overflow = "";
+        if (lastFocusedElement) lastFocusedElement.focus();
+      };
+      $$(".gallery-item").forEach(item => {
+        item.addEventListener("click", () => {
+          const img = $("img", item);
+          lastFocusedElement = item;
+          modalImg.src = img.currentSrc || img.src;
+          modalImg.alt = img.alt;
+          modal.classList.add("show");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+          closeModalBtn.focus();
+        });
+      });
+      closeModalBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", event => { if (event.target === modal) closeModal(); });
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && modal.classList.contains("show")) closeModal();
+        if (event.key === "Tab" && modal.classList.contains("show")) {
+          event.preventDefault();
+          closeModalBtn.focus();
         }
-    });
+      });
 
-    /* Mobile navigation */
-    var menuBtn = document.getElementById('menuBtn');
-    var navLinks = document.getElementById('navLinks');
-    function setMenu(open){
-        navLinks.classList.toggle('open', open);
-        menuBtn.setAttribute('aria-expanded', String(open));
-        menuBtn.firstElementChild.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-    }
-    menuBtn.addEventListener('click', function(){ setMenu(!navLinks.classList.contains('open')); });
-    navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
-    document.addEventListener('click', function(e){
-        if(navLinks.classList.contains('open') && !e.target.closest('nav')) setMenu(false);
-    });
+      // Copy email
+      const email = "varundornal272005@gmail.com";
+      const toast = $("#toast");
+      let toastTimeout;
+      const showToast = message => {
+        toast.textContent = message;
+        toast.classList.add("show");
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => toast.classList.remove("show"), 1800);
+      };
+      $("#copyEmail").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(email);
+          showToast("Email copied to clipboard");
+        } catch {
+          window.location.href = `mailto:${email}`;
+        }
+      });
 
-    /* Gallery tabs (with arrow-key support) */
-    var tabs = Array.prototype.slice.call(document.querySelectorAll('.gallery-tab'));
-    function selectTab(tab){
-        tabs.forEach(function(t){
-            var on = t === tab;
-            t.setAttribute('aria-selected', String(on));
-            t.tabIndex = on ? 0 : -1;
-            document.getElementById(t.dataset.category + '-gallery').classList.toggle('active', on);
-        });
-    }
-    tabs.forEach(function(tab, i){
-        tab.tabIndex = i === 0 ? 0 : -1;
-        tab.addEventListener('click', function(){ selectTab(tab); });
-        tab.addEventListener('keydown', function(e){
-            var dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-            if(!dir) return;
-            e.preventDefault();
-            var next = tabs[(i + dir + tabs.length) % tabs.length];
-            selectTab(next); next.focus();
-        });
-    });
-
-    /* Image lightbox */
-    var modal = document.getElementById('modal');
-    var modalImg = document.getElementById('modalImg');
-    var closeBtn = document.getElementById('closeModal');
-    var lastFocus = null;
-    document.querySelectorAll('.gallery-item').forEach(function(item){
-        item.addEventListener('click', function(){
-            var img = item.querySelector('img');
-            lastFocus = item;
-            modalImg.src = img.currentSrc || img.src;
-            modalImg.alt = img.alt;
-            modal.classList.add('show');
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-            closeBtn.focus();
-        });
-    });
-    function closeModal(){
-        modal.classList.remove('show');
-        modal.setAttribute('aria-hidden', 'true');
-        modalImg.removeAttribute('src');
-        document.body.style.overflow = '';
-        if(lastFocus) lastFocus.focus();
-    }
-    closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
-    document.addEventListener('keydown', function(e){
-        if(e.key === 'Escape' && modal.classList.contains('show')) closeModal();
-        if(e.key === 'Tab' && modal.classList.contains('show')){ e.preventDefault(); closeBtn.focus(); }
-    });
-
-    /* Scroll reveal (falls back to showing everything if unsupported) */
-    var revealEls = document.querySelectorAll('.reveal');
-    if('IntersectionObserver' in window){
-        var observer = new IntersectionObserver(function(entries){
-            entries.forEach(function(entry){
-                if(entry.isIntersecting){
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {threshold:.12});
-        revealEls.forEach(function(el){ observer.observe(el); });
-
-        /* Active navigation */
-        var links = document.querySelectorAll('.nav-links a[href^="#"]');
-        var navObserver = new IntersectionObserver(function(entries){
-            entries.forEach(function(entry){
-                if(entry.isIntersecting){
-                    links.forEach(function(link){
-                        var active = link.getAttribute('href') === '#' + entry.target.id;
-                        link.classList.toggle('active', active);
-                        if(active) link.setAttribute('aria-current', 'true'); else link.removeAttribute('aria-current');
-                    });
-                }
-            });
-        }, {rootMargin:'-35% 0px -55% 0px'});
-        document.querySelectorAll('main section[id]').forEach(function(s){ navObserver.observe(s); });
-    } else {
-        revealEls.forEach(function(el){ el.classList.add('visible'); });
-    }
-})();
-</script>
+      $("#year").textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
